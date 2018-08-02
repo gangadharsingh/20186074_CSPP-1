@@ -6,11 +6,11 @@ are: 'a', 'e', 'i', 'o', and 'u'. For example, if s = 'azcbobobegghakl', your pr
 '''
 
 def main():
-    s_inp = input()
-    '''
+        '''
     # the input string is in s_inp
     # remove pass and start your code here
     '''
+    s_inp = input()
     vowel_str = "aeiou"
     cnt_strt = 0
     for i in s_inp:
