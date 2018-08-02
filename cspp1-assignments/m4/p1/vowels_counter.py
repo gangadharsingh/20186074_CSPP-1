@@ -5,17 +5,17 @@
 '''
 
 def main():
-	s_inp = input()
-	'''
-	# the input string is in s_inp
-	# remove pass and start your code here
-	'''
-	vowel_str="aeiou"
-	cnt_strt=0
-	for i in s_inp:
-		if i == vowel_str:
-			cnt_strt += 1
-	print(cnt_strt)
+    s_inp = input()
+    '''
+    # the input string is in s_inp
+    # remove pass and start your code here
+    '''
+    vowel_str="aeiou"
+    cnt_strt=0
+    for i in s_inp:
+        if i == vowel_str:
+            cnt_strt += 1
+    print(cnt_strt)
 
 if __name__== "__main__":
-	main()
+    main()
