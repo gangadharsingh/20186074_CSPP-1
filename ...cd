@@ -1,0 +1,155 @@
+[33mcommit 1c827478d45ef583d8e2ee242d384edb58f7c0ca[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:50:31 2018 +0530
+
+    " -> 4 of 4 passed. pylint: 10.00/10 "
+
+[33mcommit c10ac883a4679a67c4bac6f231c70127d8f44f34[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:49:42 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 10.00/10 "
+
+[33mcommit f4ee56dde4c3780c023df078a3669ad1091a16d1[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:39:51 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 10.00/10 "
+
+[33mcommit 70f74ed2d1705f72a28841efab0c82bfc00863b4[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:39:20 2018 +0530
+
+    " -> 0 of 4 passed. pylint: 0/0 "
+
+[33mcommit b33bd66ed72573e648660b50cece08a4e91665c1[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:38:53 2018 +0530
+
+    " -> 0 of 4 passed. pylint: 0/0 "
+
+[33mcommit d6a0331fb92a57a3d8d24c176a6ac65ba8b7093e[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:36:59 2018 +0530
+
+    " -> 0 of 4 passed. pylint: 0/0 "
+
+[33mcommit 489595d845c9efc720fd7db546195aa304f72ee1[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:30:34 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 8.18/10 "
+
+[33mcommit ab8e3303192174ae8fbdd3ae5deda17af5cc2e3b[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:29:44 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 7.27/10 "
+
+[33mcommit 1420937e147b263a86fba70a25ee46e12718558c[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:28:59 2018 +0530
+
+    " -> 0 of 4 passed. pylint: 0/0 "
+
+[33mcommit 35d24c4c380c3527dbb3b1b6372b10d9f0f1415e[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:28:02 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 7.27/10 "
+
+[33mcommit da7f915cd6e7b24396f2456e765768b8b494ed9f[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:25:51 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 6.36/10 "
+
+[33mcommit 4cec6d0003791ac26c0526dd8c4dd74e57eb22cd[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:24:29 2018 +0530
+
+    " -> 2 of 4 passed. pylint: 4.55/10 "
+
+[33mcommit ceca0fc5b36d95f11d785eceafffff448f0f682f[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 18:23:06 2018 +0530
+
+    " -> 2 of 4 passed. pylint: -3.64/10 "
+
+[33mcommit 0573f4ace739d64dceb698bf5f56c6dc03288b37[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Thu Aug 2 17:04:28 2018 +0530
+
+    " -> 0 of 1 passed. pylint: 6.00/10 "
+
+[33mcommit bcd8eb345970bb8f211697cbbd63c8fc46e7ef37[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 22:30:08 2018 +0530
+
+    Pushing the last assignment
+
+[33mcommit 51656cfe10ebc044d890c3eeb14ea95563cc9d39[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 22:00:56 2018 +0530
+
+    sum of number for loop
+
+[33mcommit 0a3dffe6191bd749f22f45274e00d3f831e81518[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 21:43:56 2018 +0530
+
+    iterate even reverse using for loop
+
+[33mcommit f2ceb7fd1f7d796729cec283ebdbf6ea94a04169[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 21:28:49 2018 +0530
+
+    even iterate while loop
+
+[33mcommit 95acf85d22092d63e50e878278403f9b03a60068[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 19:57:34 2018 +0530
+
+    sum 1 end
+
+[33mcommit 25d16d48e9311f95466235bcb31327213d84d946[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 19:21:58 2018 +0530
+
+    iterate even reverse
+
+[33mcommit c57099125209e09f5d4421fae74f37c706e136df[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 19:15:43 2018 +0530
+
+    iterate even
+
+[33mcommit ae691e65fb323de9ee4d4be53b02fb61602f9bbf[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 18:52:45 2018 +0530
+
+    activities
+
+[33mcommit 616db50f80a28635c030f27404c9f9de7c203df1[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Wed Aug 1 14:39:33 2018 +0530
+
+    helloworld
+
+[33mcommit a2b2098ce625da5cb2d337900f8fb6259d3eea6c[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Mon Jul 30 19:28:07 2018 +0530
+
+    modified new file
+
+[33mcommit 0a233633d23f1ee219cbe33d4eac6cd4318631bd[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Mon Jul 30 18:00:57 2018 +0530
+
+    I have modified the file
+
+[33mcommit 91468e02bbed02e50a4aa548812949c66bc6eb33[m
+Author: gangadharsingh <gangadharsingh056@msitprogram.net>
+Date:   Mon Jul 30 17:57:18 2018 +0530
+
+    My first file in git
