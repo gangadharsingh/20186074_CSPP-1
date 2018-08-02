@@ -14,7 +14,7 @@ def main():
 	cnt_inp = 0
 	n_len = len(st_inp)
 	while i_inp < n_len:
-		if st_inp[i_inp:i_inp+3] in 'bob':
+		if st_inp[i_inp:i_inp+3] == 'bob':
 			cnt_inp += 1
 		i_inp += 1
 	print(cnt_inp)
