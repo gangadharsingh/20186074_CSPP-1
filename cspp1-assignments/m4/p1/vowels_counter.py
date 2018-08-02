@@ -13,7 +13,7 @@ def main():
     s_inp = input()
     cnt_strt = 0
     for i in s_inp:
-        if i == "aeiou":
+        if i in "aeiou":
             cnt_strt += 1
     print(cnt_strt)
 
