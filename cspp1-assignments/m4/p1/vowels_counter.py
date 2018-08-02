@@ -11,10 +11,9 @@ def main():
     # remove pass and start your code here
     '''
     s_inp = input()
-    vowel_str = "aeiou"
     cnt_strt = 0
     for i in s_inp:
-        if i == vowel_str:
+        if i == "aeiou":
             cnt_strt += 1
     print(cnt_strt)
 
