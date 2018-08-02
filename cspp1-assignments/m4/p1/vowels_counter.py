@@ -18,5 +18,5 @@ def main():
             cnt_strt += 1
     print(cnt_strt)
 
- if __name__== "__main__":
+if __name__== "__main__":
     main()
