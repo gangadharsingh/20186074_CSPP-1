@@ -31,7 +31,7 @@ def main():
 			if len(emt) < len(emy):
 				emt = emy
 				emy = chec
-			else
+			else:
 				emy = chec
 	print(emt)
 
