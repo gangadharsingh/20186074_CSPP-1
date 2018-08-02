@@ -23,9 +23,9 @@ def main():
 	emt = ""
 	emy = ""
 	for chec in s_inp:
-		if emy[1] <= chec:
+		if emy[-1] <= chec:
 			emy = emy + chec
-		elif emy == ''
+		elif emy == '':
 			emy = chec
 		elif emy[-1] > chec:
 			if len(emt) < len(emy):
