@@ -10,8 +10,8 @@ def main():
     # the input string is in s_inp
     # remove pass and start your code here
     '''
-    vowel_str="aeiou"
-    cnt_strt=0
+    vowel_str = "aeiou"
+    cnt_strt = 0
     for i in s_inp:
         if i == vowel_str:
             cnt_strt += 1
