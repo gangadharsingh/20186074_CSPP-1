@@ -13,18 +13,17 @@ def main():
 	# input is captured in s
 	# watch out for the data type of value stored in s
 	# your code starts here
-	s = input()
-	num =8
+	s = int(input())
 	inp =0
 	guess =1
-	for i in range(num):
-		if(i**3 == num):
+	for i in range(s):
+		if(i**3 == s):
 			guess =i
 			inp =1
 	if (inp == 1):
-		print(num,"is a perfect cube")
+		print(s,"is a perfect cube")
 	else:
-		print(num,"is not a perfect cube")
+		print(s,"is not a perfect cube")
 
 
 if __name__== "__main__":
