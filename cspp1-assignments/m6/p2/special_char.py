@@ -15,10 +15,9 @@ def main():
     str_cmp = "!@#$%^&*"
     i = len(str_inp)
     j = 0
-    while j < i-1:
+    while j < i:
         if str_inp[j] != "!@#$%^&*":
             str_emt += str_inp[j]
-            print(j)
         else:
             str_emt += 'x'
             str_emt += str_inp[j]
