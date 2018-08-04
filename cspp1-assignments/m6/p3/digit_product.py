@@ -1,7 +1,7 @@
 '''
 @author: gangadharsingh
 Given a  number int_input, find the product of all the digits
-example: 
+example:
     input: 123
     output: 6
 '''
@@ -13,7 +13,7 @@ def main():
     prod_op = 1
     int_inp = 0
     prod_neg = 1
-    if int(int_input) <0:
+    if int(int_input) < 0:
         int_inp = -int(int_input)
         for j in str(int_inp):
             prod_neg = int(j)*prod_neg
