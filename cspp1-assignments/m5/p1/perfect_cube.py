@@ -8,23 +8,23 @@ a perfect cube or not
 # testcase 2
 # Input: 21950
 # Output: 21950 is not a perfect cube
-@author: gangadharsingh
+@author: gangadharsinghs
 '''
 def main():
+    '''
     # input is captured in s
     # watch out for the data type of value stored in s
     # your code starts here
-    s = int(input())
+    '''
+    s_inp = int(input())
     inp = 0
-    guess = 1
-    for i in range(s):
-        if(i**3 == s):
-            guess =i
-            inp =1
-    if (inp == 1):
-        print(s,"is a perfect cube")
+    for i in range(s_inp):
+        if i**3 == s_inp:
+            inp = 1
+    if inp == 1:
+        print(s_inp, "is a perfect cube")
     else:
-        print(s,"is not a perfect cube")
+        print(s_inp, "is not a perfect cube")
 
 
 if __name__ == "__main__":
