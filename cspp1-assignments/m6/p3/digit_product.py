@@ -21,9 +21,9 @@ def main():
         for i in int_input:
             prod_op = int(i)*prod_op
     if int(int_input) < 0:
-        print(prod_neg)
+        print("-",prod_neg)
     else:
-        print("-",prod_op)
+        print(prod_op)
 
 if __name__ == "__main__":
     main()
