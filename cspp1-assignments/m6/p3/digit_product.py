@@ -12,7 +12,6 @@ def main():
     int_input = str(input())
     
     prod_op = 1
-    
     for i in int_input:
         prod_op = int(i)*prod_op
     print(prod_op)
