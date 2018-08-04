@@ -19,11 +19,13 @@ def main():
 	step_inp = 0.1
 	epsilon = 0.01
 	gues_a = 0
-	while abs(gues_a**2 - s_inp) > epsilon:
-		if gues_a < s_inp:
-			gues_a += step_inp
-		else:
-			break
+	flag = 1
+	if flag == 1
+		while abs(gues_a**2 - s_inp) > epsilon:
+			if gues_a < s_inp:
+				gues_a += step_inp
+			else:
+				flag =0
 	if abs(gues_a**2 - s_inp) < epsilon:
 		print(str(gues_a))
 	else:
