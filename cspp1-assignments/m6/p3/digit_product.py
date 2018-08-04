@@ -12,11 +12,11 @@ def main():
     int_input = str(input())
     prod_op = 1
     int_inp = 0
-    prod_neg = 0
+    prod_neg = 1
     if int(int_input) <0:
         int_inp = -int(int_input)
-        for i in str(int_inp):
-            prod_neg = int(i)*prod_op
+        for j in str(int_inp):
+            prod_neg = int(j)*prod_neg
     else:
         for i in int_input:
             prod_op = int(i)*prod_op
