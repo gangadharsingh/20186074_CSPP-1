@@ -12,15 +12,18 @@ def main():
     '''
     str_inp = input()
     str_emt = ""
-    str_cmp = "!@#$%^&*"
+    str_cmp ="!@#$%^&*"
     i = len(str_inp)
     j = 0
-    while j < i:
-        if str_inp[j] != "!@#$%^&*":
-            str_emt += str_inp[j]
-        else:
-            str_emt += 'x'
-            str_emt += str_inp[j]
+    m=0
+    while j < i-1:
+        while m in str_cmp: 
+            if str_inp[j] != "!":
+                str_emt += str_inp[j]
+            else:
+                str_emt += ' '
+                str_emt += str_inp[j]
+            m=m+1
         j += 1
     print(str_emt)
 
