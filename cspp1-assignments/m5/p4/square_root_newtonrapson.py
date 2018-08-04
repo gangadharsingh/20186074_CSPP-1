@@ -16,12 +16,12 @@ def main():
 	# don't change these values
 	# your code starts here
 	'''
-	s_inp = input()
+	s_inp = int(input())
 	epsilon = 0.01
 	guess_a = s_inp/2.0
-	guess_b = 0
+	
 	while abs(guess_a*guess_a - s_inp) >= epsilon:
-		guess_a =guess_a - (((guess_a**2) - s_inp)/(2*guess_a))
+		guess_a = guess_a - (((guess_a**2) - s_inp)/(2*guess_a))
 	print(str(guess_a))
 
 
