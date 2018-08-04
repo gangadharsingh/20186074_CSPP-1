@@ -21,7 +21,8 @@ def main():
         for i in int_input:
             prod_op = int(i)*prod_op
     if int(int_input) < 0:
-        print("-",prod_neg)
+        prod_neg = -prod_neg
+        print(prod_neg)
     else:
         print(prod_op)
 
