@@ -23,7 +23,7 @@ def main():
     if int(int_input) < 0:
         print(prod_neg)
     else:
-        print(prod_op)
+        print("-",prod_op)
 
 if __name__ == "__main__":
     main()
