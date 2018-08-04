@@ -10,7 +10,6 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = str(input())
-    
     prod_op = 1
     for i in int_input:
         prod_op = int(i)*prod_op
