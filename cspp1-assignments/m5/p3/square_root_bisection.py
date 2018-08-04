@@ -16,7 +16,7 @@ def main():
     # your code starts here
     '''
     s_inp = int(input())
-    inp_m =s_inp
+    inp_m = s_inp
     inp_l = 0.0
     epsilon = 0.01
     inp_a = (inp_l + inp_m)/2.0
