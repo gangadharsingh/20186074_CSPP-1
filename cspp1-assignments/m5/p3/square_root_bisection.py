@@ -15,17 +15,17 @@ def main():
     # don't change these values
     # your code starts here
     '''
-    s_inp = input()
+    s_inp = int(input())
     inp_m =s_inp
-    inp_l = 1
-    epsilon = 0.1
+    inp_l = 0.0
+    epsilon = 0.01
     inp_a = (inp_l + inp_m)/2.0
-    while abs(inp_m**2 - s_inp) >= epsilon:
-        if inp_m**2 < s_inp:
+    while abs(inp_a**2 - s_inp) >= epsilon:
+        if inp_a**2 < s_inp:
             inp_l = inp_a
         else:
             inp_m = inp_a
-        inp_m = (inp_l + inp_m)/2
+        inp_a = (inp_l + inp_m)/2.0
     print(inp_a)
 if __name__ == "__main__":
     main()
