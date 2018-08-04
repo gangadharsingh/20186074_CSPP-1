@@ -12,14 +12,18 @@ def main():
     int_input = str(input())
     prod_op = 1
     int_inp = 0
+    prod_neg = 0
     if int(int_input) <0:
         int_inp = -int(int_input)
         for i in str(int_inp):
-            prod_op = int(i)*prod_op
+            prod_neg = int(i)*prod_op
     else:
         for i in int_input:
             prod_op = int(i)*prod_op
-    print(prod_op)
+    if int(int_input) < 0:
+        print(prod_neg)
+    else:
+        print(prod_op)
 
 if __name__ == "__main__":
     main()
