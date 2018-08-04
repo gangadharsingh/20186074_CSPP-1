@@ -20,7 +20,7 @@ def main():
 	epsilon = 0.01
 	gues_a = 0
 	flag = 1
-	if flag == 1
+	if flag == 1:
 		while abs(gues_a**2 - s_inp) > epsilon:
 			if gues_a < s_inp:
 				gues_a += step_inp
