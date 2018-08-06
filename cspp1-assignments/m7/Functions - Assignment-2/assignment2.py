@@ -28,21 +28,28 @@ Monthly unpaid balance)
 
 
 def paying_debt(balance, annual_ir):
-	i = 1
-	while i>0:
-		mub_ub = balance - 10*i
-		unpaid_bem = mub_ub + (annual_ir/12.0)*mub_ub
-		balance = unpaid_bem
-		i += 1
-		if unpaid_bem < 0:
-			return(i*10)
+	if balance < 0:
+		return 0
+	i_inp = 10
+	while True:
+		var_a = 0
+		bal_b = balance
+		while var_a != 12:
+			unbal_a = bal_b - (i)
+			bal_b = unbal_a + (unbal_a * annual_ir/12)
+			var_a += 1
+		if bal_b <= 0.5:
+			break
+		i_inp += 10
+	return i_inp
+		
 	
 
 def main():
 	data = input()
 	data = data.split(' ')
 	data = list(map(float, data))
-	print(paying_debt(data[0], data[1]))
+	print("Lowest payment: ",paying_debt(data[0], data[1]))
 	
 if __name__ == "__main__":
 	main()
