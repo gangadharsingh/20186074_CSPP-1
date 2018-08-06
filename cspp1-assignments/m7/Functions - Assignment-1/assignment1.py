@@ -45,8 +45,9 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    for i in range(12):
-        print("Remaining balance: %s"%payingDebtOffInAYear(data[0],data[1],data[2]))
+    for rem_bal in range(12):
+        rem_bal = payingDebtOffInAYear(data[0],data[1],data[2])
+        print("Remaining balance: %s"%)
         data[0] = payingDebtOffInAYear(data[0],data[1],data[2])
 
 if __name__== "__main__":
