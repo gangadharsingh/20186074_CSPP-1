@@ -35,7 +35,7 @@ def paying_debt(balance, annual_ir):
 		var_a = 0
 		bal_b = balance
 		while var_a != 12:
-			unbal_a = bal_b - (i)
+			unbal_a = bal_b - (i_inps)
 			bal_b = unbal_a + (unbal_a * annual_ir/12)
 			var_a += 1
 		if bal_b <= 0.5:
