@@ -28,28 +28,30 @@ Monthly unpaid balance)
 
 
 def paying_debt(balance, annual_ir):
-	if balance < 0:
-		return 0
-	i_inp = 10
-	while True:
-		var_a = 0
-		bal_b = balance
-		while var_a != 12:
-			unbal_a = bal_b - (i_inps)
-			bal_b = unbal_a + (unbal_a * annual_ir/12)
-			var_a += 1
-		if bal_b <= 0.5:
-			break
-		i_inp += 10
-	return i_inp
-		
-	
-
+    '''checking the condition
+    '''
+    if balance < 0:
+        return 0
+    i_inp = 10
+    while True:
+        var_a = 0
+        bal_b = balance
+        while var_a != 12:
+            unbal_a = bal_b - (i_inp)
+            bal_b = unbal_a + (unbal_a * annual_ir/12)
+            var_a += 1
+        if bal_b <= 0.5:
+            break
+        i_inp += 10
+    return i_inp
+     
 def main():
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print("Lowest payment: ",paying_debt(data[0], data[1]))
-	
+    '''checking the input value
+    '''
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print("Lowest payment: ",paying_debt(data[0], data[1]))
+    
 if __name__ == "__main__":
-	main()
+    main()
