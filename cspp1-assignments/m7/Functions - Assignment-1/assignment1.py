@@ -28,8 +28,7 @@ def pay_debt(balance, annual_ir, mont_p):
     '''calculating the unpaid balance each time and finally returning the remaining balance after
     end of 12 months
     '''
-    
-    for i in range(12):
+    for mub in range(12):
         mub = balance - mont_p * balance
         ubem = mub + (annual_ir / 12.0) * mub
         balance = ubem
