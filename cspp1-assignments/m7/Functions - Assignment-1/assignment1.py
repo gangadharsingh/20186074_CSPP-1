@@ -24,27 +24,23 @@ the end of the year in the format:
 rate x Monthly unpaid balance)
 @author: gangadharsingh
 '''
-def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
+def pay_debt(balance, annual_ir, mont_p):
     '''calculating the unpaid balance each time and finally returning the remaining balance after
     end of 12 months
     '''
-    mub = balance - monthlyPaymentRate * balance    
-    ubem = mub + (annualInterestRate/12.0) * mub
+    
     for i in range(12):
-        mub = balance - monthlyPaymentRate * balance    
-        ubem = mub + (annualInterestRate/12.0) * mub
+        mub = balance - mont_p * balance
+        ubem = mub + (annual_ir / 12.0) * mub
         balance = ubem
-    return round(ubem,2)
-
-
-
+    return round(ubem, 2)
 def main():
     '''calling the function to calculate the remaining balance
     '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    rm_bal = payingDebtOffInAYear(data[0],data[1],data[2])
-    print("Remaining balance:",rm_bal)
-if __name__== "__main__":
+    rm_bal = pay_debt(data[0], data[1], data[2])
+    print("Remaining balance:", rm_bal)
+if __name__ == "__main__":
     main()
