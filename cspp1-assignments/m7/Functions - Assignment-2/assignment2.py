@@ -25,8 +25,6 @@ is found below:
 Monthly unpaid balance)
 @author: gangadharsingh
 '''
-
-
 def paying_debt(balance, annual_ir):
     '''checking the condition
     '''
@@ -44,7 +42,7 @@ def paying_debt(balance, annual_ir):
             break
         i_inp += 10
     return i_inp
-     
+
 def main():
     '''checking the input value
     '''
