@@ -30,7 +30,7 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
     '''
     mub = balance - monthlyPaymentRate * balance    
     ubem = mub + (annualInterestRate/12.0) * mub
-    return round(ubem,3)
+    return round(ubem,2)
 
 
 
