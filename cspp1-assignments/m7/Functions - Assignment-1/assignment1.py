@@ -28,14 +28,9 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
     '''calculating the unpaid balance each time and finally returning the remaining balance after
     end of 12 months
     '''
-    '''def mir(x_inp):
-        return annualInterestRate / 12.0
-    #def mmp(y_inp):
-        return monthlyPaymentRate * prev_bal'''
-    
     mub = balance - monthlyPaymentRate * balance    
     ubem = mub + (annualInterestRate/12.0) * mub
-    return round(ubem,3)
+    return round(ubem,2)
 
 
 
@@ -45,9 +40,9 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    for rem_bal in range(12):
+    for i in range(12):
         rem_bal = payingDebtOffInAYear(data[0],data[1],data[2])
-        data[0] = payingDebtOffInAYear(data[0],data[1],data[2])
-    print("Remaining balance: %s"%rem_bal)
+        data[0] = rem_bal
+    print("Remaining balance:",rem_bal)
 if __name__== "__main__":
     main()
