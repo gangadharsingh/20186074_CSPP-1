@@ -38,7 +38,7 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     for i in range(12):
-        print("Remaining balance: %s"%payingDebtOffInAYear(data[0],data[1],data[2]))
+        print("Remaining balance: "%payingDebtOffInAYear(data[0],data[1],data[2]))
         data[0] = payingDebtOffInAYear(data[0],data[1],data[2])
 
 if __name__ == "__main__":
