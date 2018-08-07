@@ -74,7 +74,7 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     x = paying_doiy(data[0],data[1])
-    print(round(x,2))
+    print("Lowest Payment:",round(x,2))
     
 if __name__== "__main__":
     main()
