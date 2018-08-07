@@ -14,7 +14,7 @@ def fact_rial(n):
     '''
     # Your code here
     if n == 0:
-    	return 0
+    	return 1
     elif n == 1:
     	return 1
     return fact_rial(n-1) * n
