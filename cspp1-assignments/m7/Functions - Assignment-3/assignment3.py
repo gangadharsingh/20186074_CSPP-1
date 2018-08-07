@@ -71,7 +71,7 @@ def paying_doiy(balance, annual_ir):
     month_pl = balance / 12
     month_pu = (balance * (1 + mont_ir) ** 12) / 12.0
     bal_up = balance
-    epsilon = 0.03
+    epsilon = 0.0001
     ges_a = (month_pu + month_pl) / 2
     while True:
         mnt = 1
