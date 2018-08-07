@@ -73,7 +73,8 @@ def main():
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print(paying_doiy(data[0],data[1]),2)
+    x = paying_doiy(data[0],data[1])
+    print(round(x,2))
     
 if __name__== "__main__":
     main()
