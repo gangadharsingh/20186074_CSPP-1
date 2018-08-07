@@ -13,9 +13,8 @@ def recur_power(base, exp):
     '''
     # Your code here
     if exp == 0:
-        return exp
-    else:
-        return recur_power(base, exp-1) + base
+        return 1
+    return recur_power(base, exp-1) * base
 def main():
     '''This will take input.
     '''
