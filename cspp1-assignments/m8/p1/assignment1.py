@@ -15,8 +15,6 @@ def fact_rial(n_inp):
     # Your code here
     if n_inp == 0:
         return 1
-    elif n_inp == 1:
-        return 1
     return fact_rial(n_inp-1) * n_inp
 
 def main():
