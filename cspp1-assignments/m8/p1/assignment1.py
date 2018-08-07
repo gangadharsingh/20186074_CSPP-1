@@ -21,7 +21,7 @@ def fact_rial(n):
 
 def main():
     a = input()
-    print(factorial(int(a)))    
+    print(fact_rial(int(a)))    
 
 if __name__== "__main__":
     main()
