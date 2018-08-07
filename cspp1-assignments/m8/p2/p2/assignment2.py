@@ -13,14 +13,14 @@ def sumofdigits(var_n):
     '''
     # Your code here
     if var_n == 0:
-    	return 0
+        return 0
     return (var_n % 10) + sumofdigits(var_n//10)
 
 
 def main():
-	'''
-	main_function
-	'''
+    '''
+    main_function
+    '''
     var_a = input()
     print(sumofdigits(int(var_a)))
 
