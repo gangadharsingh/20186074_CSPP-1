@@ -13,13 +13,13 @@ def sumof_digits(n):
     # Your code here
     if n >= 1:
     	return n%10 + sumof_digits(n//10)
-    return 0  
+    return n 
 
 
 def main():
     a = input()
     print(sumof_digits(int(a)))  
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
 
