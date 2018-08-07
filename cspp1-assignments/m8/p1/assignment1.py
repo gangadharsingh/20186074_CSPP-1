@@ -6,24 +6,24 @@ and returns the factorial of given number.
 @author: gangadharsingh
 '''
 
-def fact_rial(n):
+def fact_rial(n_inp):
     '''
     n is positive Integer
 
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n == 0:
-    	return 1
-    elif n == 1:
-    	return 1
-    return fact_rial(n-1) * n
-    
-
+    if n_inp == 0:
+        return 1
+    elif n_inp == 1:
+        return 1
+    return fact_rial(n_inp-1) * n_inp
 
 def main():
-    a = input()
-    print(fact_rial(int(a)))    
+    '''print factorial
+    '''
+    a_inp = input()
+    print(fact_rial(int(a_inp)))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
