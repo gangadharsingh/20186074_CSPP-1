@@ -13,7 +13,9 @@ def fact_rial(n):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n == 1:
+    if n == 0:
+    	return 0
+    elif n == 1:
     	return 1
     return fact_rial(n-1) * n
     
