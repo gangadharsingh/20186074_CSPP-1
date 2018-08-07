@@ -15,7 +15,7 @@ def sumof_digits(num_inp):
     # Your code here
     if num_inp >= 1:
         return num_inp % 10 + sumof_digits(num_inp // 10)
-    return n 
+    return num_inp
 
 def main():
     '''sum of digits of given number
