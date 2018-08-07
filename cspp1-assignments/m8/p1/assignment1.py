@@ -1,26 +1,27 @@
 '''
 # Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one
-number and returns the factorial of given number.
+# Write a Python function, factorial(n), that takes in one number
+and returns the factorial of given number.
 # This function takes in one number and returns one number.
 @author: gangadharsingh
 '''
-def fact_rial(n_inp):
+
+def fact_rial(n):
     '''
     n is positive Integer
 
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n_inp == 1:
-        return 1
-    return fact_rial(n_inp-1) * n_inp
+    if n == 1:
+    	return 1
+    return fact_rial(n-1) * n
+    
+
 
 def main():
-    '''factorial of given number
-    '''
-    a_inp = input()
-    print(fact_rial(int(a_inp)))    
+    a = input()
+    print(factorial(int(a)))    
 
-if __name__ == "__main__":
+if __name__== "__main__":
     main()
