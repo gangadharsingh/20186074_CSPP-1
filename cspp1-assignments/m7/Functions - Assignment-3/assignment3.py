@@ -46,26 +46,34 @@ def paying_doiy(balance, annual_ir):
     value as you did in Assignment 2.
 
     '''
-    mont_pl_a = balance / 12
-    month_pl = (balance * (1 + \
-        (annual_ir/12.0)) ** 12) / 12.0
+    mont_ir = annual_ir / 12.0
+    month_pl = balance / 12
+    month_pu = (balance * (1 + mont_ir) ** 12) / 12.0
     bal_up = balance
-    epsilon 0.0001
-    ges_a = (month_pl_a + month_pl) / 2
+    epsilon = 0.0001
+    ges_a = (month_pu + month_pl) / 2
     while True:
         mnt = 1
         while mnt <= 12:
             bal_up = bal_up - ges_a
-            bal_up = bal_up + ((annual_ir/12.0) * bal_up)
+            bal_up = bal_up + (mont_ir * bal_up)
             mnt += 1
         if bal_up > 0 and bal_up > epsilon:
-            
+            month_pl = ges_a
+            bal_up = balance
+        elif bal_up < 0 and bal_up < -epsilon:
+        	month_pu = ges_a
+        	bal_up = balance
+        else:
+        	return ges_a
+        ges_a = (month_pl + month_pu) / 2
+
 def main():
     data = input()
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print(paying_doiy(data[0],data[1]))
+    print(paying_doiy(data[0],data[1]),2)
     
 if __name__== "__main__":
     main()
