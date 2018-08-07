@@ -96,7 +96,7 @@ def main():
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    x_inp = paying_doiy(data[0], data[1])
+    x = paying_doiy(data[0], data[1])
     print("Lowest Payment:", round(x, 2))
 
 if __name__ == "__main__":
