@@ -15,10 +15,10 @@ def get_guessed_word(secret_word, letters_guessed):
     # FILL IN YOUR CODE HERE...
     x = " "
     for i in secret_word:
-        if i not in letters_guessed:
-            x += "_"
-        else:
+        if i in letters_guessed:
             x += i
+        else:
+            x += '_'
     return x
 
 
