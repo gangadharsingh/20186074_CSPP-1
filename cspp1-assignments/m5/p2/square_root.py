@@ -2,7 +2,7 @@
 # Write a python program to find the square root of the given number
 # using approximation method
 @author: gangadharsingh
-# testcase 1
+# testcase 1b
 # input: 25
 # output: 4.999999999999998
 # testcase 2
@@ -15,7 +15,7 @@ def main():
     # don't change these values
     # your code starts here
     '''
-    s_inp = int(input())
+    s_inp = 23#int(input())
     step_inp = 0.1
     epsilon = 0.01
     gues_a = 0
