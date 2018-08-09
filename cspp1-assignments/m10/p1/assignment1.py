@@ -15,8 +15,8 @@ def get_available_letters(let_ges):
     str_emp = ""
     str_alp = "abcdefghijklmnopqrstuvwxyz"
     for i in str_alp:
-        if let_ges[i] not in str_alp:
-            str_emp += str_alp[i]
+        if i not in let_ges:
+            str_emp += i
     return str_emp
 
 
@@ -28,7 +28,7 @@ def main():
     '''
     user_input = input()
     user_input = user_input.split()
-    data = []
+    data = ['a', 'q', 'u', 'y', 'r']
     for char in user_input:
         data.append(char[0])
     print(get_available_letters(data))
