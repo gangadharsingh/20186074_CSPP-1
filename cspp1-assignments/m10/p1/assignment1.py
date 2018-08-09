@@ -20,15 +20,13 @@ def get_available_letters(let_ges):
     return str_emp
 
 
-
-
 def main():
     '''
     Main function for the given program
     '''
     user_input = input()
     user_input = user_input.split()
-    data = ['a', 'q', 'u', 'y', 'r']
+    data = []
     for char in user_input:
         data.append(char[0])
     print(get_available_letters(data))
