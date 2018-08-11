@@ -55,7 +55,6 @@ def main():
         string = input().split(" ")
         #string += '\n'
         lis_ip.extend(string)
-    #print(lis_ip)
     string = lis_ip
     print(create_social_network(string))
 

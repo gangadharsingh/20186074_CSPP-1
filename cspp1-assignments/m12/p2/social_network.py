@@ -14,7 +14,13 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    list_temp = []
+    for key_sr in network:
+        if key_sr in arg2:
+            #arg1 = list_temp.append(key_sr)
+            network[key_sr] = list_temp.append(key_sr)
+    return network
+
 
 def unfollow(network, arg1, arg2):
     '''
@@ -26,7 +32,7 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    
 
 def delete_person(network, arg1):
     '''
