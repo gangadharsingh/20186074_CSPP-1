@@ -57,7 +57,7 @@ def main():
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
             network = delete_person(network, output[1])
-
+    
     print(network)
 
 if __name__ == "__main__":
