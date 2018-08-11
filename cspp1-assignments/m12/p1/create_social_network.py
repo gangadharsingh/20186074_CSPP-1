@@ -51,7 +51,7 @@ def main():
     lis_ip = []
     lines = int(input())
     for i in range(lines):
-        #i += 1
+        i += 1
         string = input().split(" ")
         #string += '\n'
         lis_ip.extend(string)
