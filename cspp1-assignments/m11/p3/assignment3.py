@@ -12,15 +12,14 @@ the correct behavior be? Additionally, the empty string ('') is not a valid word
 you code this function correctly, you shouldn't need an additional check for this condition.
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate
 tests in test_ps4a.py before pasting your function definition here.
+@author: gangadharsingh
 '''
 
-def isValidWord(word, hand, wordList):
+def isValid_word(word, hand, wordList):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
-
     Does not mutate hand or wordList.
-   
     word: string
     hand: dictionary (string -> int)
     wordList: list of lowercase strings
@@ -28,23 +27,21 @@ def isValidWord(word, hand, wordList):
     # TO DO ... <-- Remove this comment when you code this function
     cnt = 0
     if word in wordList:
-        for i in word:
-            if i in hand and hand[i] != 0:
+        for i_inp in word:
+            if i _inp in hand and hand[i_inp] != 0:
                 cnt += 1
     return cnt == len(word)
 
-
 def main():
-	word=input()
-	n=int(input())
-	adict={}
-	for i in range(n):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	l2=input().split()
-    
-	print(isValidWord(word,adict,l2))
+    word = input()
+    n = int(input())
+    adict = {}
+    for i in range(n):
+        data = input()
+        l = data.split()
+        adict[l[0]] = int(l[1])
+    l2 = input().split()
+    print(isValid_word(word, adict, l2))
 
 if __name__== "__main__":
-	main()
+    main()
