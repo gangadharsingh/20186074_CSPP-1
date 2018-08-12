@@ -27,14 +27,14 @@ def loadWords():
     Depending on the size of the word list, this function may
     take a while to finish.
     """
-    print "Loading word list from file..."
+    print("Loading word list from file...")
     # inFile: file
     inFile = open(WORDLIST_FILENAME, 'r', 0)
     # wordList: list of strings
     wordList = []
     for line in inFile:
         wordList.append(line.strip().lower())
-    print "  ", len(wordList), "words loaded."
+    print("  ", len(wordList), "words loaded.")
     return wordList
 
 
