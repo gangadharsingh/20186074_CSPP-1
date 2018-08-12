@@ -7,7 +7,7 @@ which can be done in under five lines of code.
 '''
 
 def calculate_hand_len(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
     hand: dictionary (string int)
     returns: integer
@@ -22,13 +22,11 @@ def main():
     '''
     n_inp = input()
     adict = {}
-    for data in range(int(n-inp)):
+    for data in range(int(n_inp)):
         data = input()
         l_inp = data.split()
         adict[l_inp[0]] = int(l_inp[1])
     print(calculate_hand_len(adict))
-        
-
 
 if __name__ == "__main__":
     main()
