@@ -28,7 +28,7 @@ def get_word_score(word, n):
     cnt = 0
     for i in word:
         cnt += SCRABBLE_LETTER_VALUES[i]
-    return cnt*len(word0)
+    return cnt*len(word)
 
 
 
@@ -38,7 +38,7 @@ def main():
     '''
     data = input()
     data = data.split()
-    print((data[0], int(data[1])))
+    print(get_word_score(data[0], int(data[1])))
 
 
 if __name__ == "__main__":
