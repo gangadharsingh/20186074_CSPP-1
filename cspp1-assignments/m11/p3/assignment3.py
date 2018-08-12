@@ -45,8 +45,6 @@ def main():
 	l2=input().split()
     
 	print(isValidWord(word,adict,l2))
-	print(word,n,adict,l,l2)	
-
 
 if __name__== "__main__":
 	main()
