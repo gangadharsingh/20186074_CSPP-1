@@ -3,7 +3,7 @@
     There are 3 functions below that have to be completed
     Note: PyLint score need not be 10/10 for this assignment. We expect 9.5/10
 '''
-
+n_network = {}
 def follow(network, arg1, arg2):
     '''
         3 arguments are passed to this function
@@ -14,10 +14,9 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    list_temp = []
     for key_sr in network:
-        if key_sr in arg2:
-            network[key_sr] += network['arg1']
+        if key_sr in arg1:
+            network[key_sr] += network[arg2]
     return network
 
 
@@ -31,10 +30,9 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    list_ip = []
     for k in network:
         if k in arg1:
-            del network['arg2']
+            del network[arg2]
     return network
 
 def delete_person(network, arg1):
@@ -48,10 +46,12 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    list_temp = []
     for ky_r in network:
-        if ky_r in arg1:
-            del network['arg1']
+        del network['arg1']
+        if i in network:
+            if arg1 in network[i]:
+                
+
     return network
 
 def main():
