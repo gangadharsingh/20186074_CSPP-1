@@ -6,9 +6,9 @@ which can be done in under five lines of code.
 @author: gangadharsingh
 '''
 
-def calculateHandlen(hand):
+def calculate_hand_len(hand):
     """ 
-    Returns the length (number of letters) in the current hand.    
+    Returns the length (number of letters) in the current hand.
     hand: dictionary (string int)
     returns: integer
     """
@@ -16,20 +16,19 @@ def calculateHandlen(hand):
     for i in hand:
         cnt += hand[i]
     return cnt
-     
 
 def main():
     '''main function
     '''
-    n=input()
-    adict={}
-    for i in range(int(n)):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
-    print(calculateHandlen(adict))
+    n_inp = input()
+    adict = {}
+    for data in range(int(n-inp)):
+        data = input()
+        l_inp = data.split()
+        adict[l_inp[0]] = int(l_inp[1])
+    print(calculate_hand_len(adict))
         
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
