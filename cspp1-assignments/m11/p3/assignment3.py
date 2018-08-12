@@ -15,7 +15,7 @@ tests in test_ps4a.py before pasting your function definition here.
 @author: gangadharsingh
 '''
 
-def is_ValidWord(word, hand, wordList):
+def is_validword(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -26,22 +26,24 @@ def is_ValidWord(word, hand, wordList):
     """
     # TO DO ... <-- Remove this comment when you code this function
     cnt = 0
-    if word in wordList:
+    if word in word_list:
         for i_inp in word:
             if i_inp in hand and hand[i_inp] != 0:
                 cnt += 1
     return cnt == len(word)
 
 def main():
+    '''Main function
+    '''
     word = input()
     n_inp = int(input())
     adict = {}
-    for data in range(n):
+    for data in range(n_inp):
         data = input()
         l_inp = data.split()
         adict[l_inp[0]] = int(l_inp[1])
     l2_inp = input().split()
-    print(is_ValidWord(word, adict, l2_inp))
+    print(is_validword(word, adict, l2_inp))
 
 if __name__ == "__main__":
     main()
