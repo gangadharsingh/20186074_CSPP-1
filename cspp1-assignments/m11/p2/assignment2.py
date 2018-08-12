@@ -21,18 +21,18 @@ def updateHand(hand, word):
     # TO DO ... <-- Remove this comment when you code this function
     for i in word:
         if i in hand:
-            hand[i] - 1
+            hand[i] -= 1
     return hand
 
 def main():
-	n=input()
-	adict={}
+	n = input()
+	adict = {}
 	for i in range(int(n)):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	data1=input()
-	print(updateHand(adict,data1))
+		data = input()
+		l = data.split()
+		adict[l[0]] = int(l[1])
+	data1 = input()
+	print(updateHand(adict, data1))
 		
 
 
