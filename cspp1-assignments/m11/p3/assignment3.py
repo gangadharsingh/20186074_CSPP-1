@@ -28,8 +28,9 @@ def is_validword(word, hand, word_list):
     cnt = 0
     if word in word_list:
         for i_inp in word:
-            if i_inp in hand and hand[i_inp] != 0:
-                cnt += 1
+            if i_inp in hand and hand[i_inp] > 0:
+                hand[i_inp] -= 1
+                cnt += hand[i_inp]
     return cnt == len(word)
 
 def main():
