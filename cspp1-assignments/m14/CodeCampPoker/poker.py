@@ -14,6 +14,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    print("is_straight")
     if all(True if c in "2345A" else False for c, s in hand):
         return True
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
@@ -29,6 +30,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
+    print("is_flush")
     suit = hand[0]
     for i in hand:
         if suit[1] != i[1]:
@@ -36,32 +38,35 @@ def is_flush(hand):
     return True
 
 def four_ofakind(hand):
-    face_values = []
-    cnt = 0
+    face_values1 = []
     for i in hand:
-        face_values.append(dict_inp[i[0]])
-    face_values.sort()
-    for i in range(len(face_values)):
-        if face_values[i] == face_values[i+1]:
-            cnt += 1
-    return cnt == 3
+        face_values1.append(dict_inp[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count +=1
+    return count == 3
+    
 
 def three_ofakind(hand):
-    hand.sorted()
-    suit = hand[0]
-    cnt_rank = 0
+    face_values1 = []
     for i in hand:
-        if suit[0] == i[0]:
-            cnt_rank += 1
-    return cnt_rank == 2
+        face_values1.append(dict_inp[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count +=1
+    return count == 2
 
 def pair_ofakind(hand):
-    suit = hand[0]
-    cnt_rank = 0
+    face_values1 = []
     for i in hand:
-        if suit[0] == i[0]:
-            cnt_rank += 1
-    return cnt_rank == 1
+        face_values1.append(dict_inp[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count +=1
+    return count == 1
 
 def hand_rank(hand):
     '''
@@ -135,4 +140,8 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
+
+    for i in range(0,len(face_values)-1):
+        if face_values[i+1] == face_values[i]:
+
     print(' '.join(poker(HANDS)))
