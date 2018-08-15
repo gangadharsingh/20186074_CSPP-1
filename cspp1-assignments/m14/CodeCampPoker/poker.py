@@ -40,24 +40,24 @@ def four_ofakind(hand):
     cnt_rank = 0
     for i in hand:
         if suit[0] == i[0]:
-            cnt += 1
-    return cnt == 4
+            cnt_rank += 1
+    return cnt_rank == 4
 
 def three_ofakind(hand):
     suit = hand[0]
     cnt_rank = 0
     for i in hand:
         if suit[0] == i[0]:
-            cnt += 1
-    return cnt == 3
+            cnt_rank += 1
+    return cnt_rank == 3
 
 def pair_ofakind(hand):
     suit = hand[0]
     cnt_rank = 0
     for i in hand:
         if suit[0] == i[0]:
-            cnt += 1
-    return cnt == 2
+            cnt_rank += 1
+    return cnt_rank == 2
 
 def hand_rank(hand):
     '''
