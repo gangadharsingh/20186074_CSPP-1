@@ -39,6 +39,7 @@ def is_flush(hand):
 
 def four_ofakind(hand):
     face_values1 = []
+    count = 0
     for i in hand:
         face_values1.append(dict_inp[i[0]])
     face_values1.sort()
@@ -50,6 +51,7 @@ def four_ofakind(hand):
 
 def three_ofakind(hand):
     face_values1 = []
+    count = 0
     for i in hand:
         face_values1.append(dict_inp[i[0]])
     face_values1.sort()
@@ -60,6 +62,7 @@ def three_ofakind(hand):
 
 def pair_ofakind(hand):
     face_values1 = []
+    count = 0    
     for i in hand:
         face_values1.append(dict_inp[i[0]])
     face_values1.sort()
