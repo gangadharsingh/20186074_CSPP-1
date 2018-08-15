@@ -3,7 +3,8 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-dict_inp = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6, '5':5, '4':4, '3':3, '2':2}
+D_INP = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6,\
+ '5':5, '4':4, '3':3, '2':2}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -38,42 +39,49 @@ def is_flush(hand):
 def four_ofakind(hand):
     '''when four of same kind and one other of other rank
     '''
-    face_values1 = []
+    ''''face_values1 = []
     count = 0
     for i in hand:
-        face_values1.append(dict_inp[i[0]])
+        face_values1.append(D_INP[i[0]])
     face_values1.sort()
     for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
-            count +=1
+            count += 1
     return count == 3
-    
+    '''
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    return len(card_values) == 2
 
 def three_ofakind(hand):
     '''when three of same kind and two of other of other rank
     '''
-    face_values1 = []
+    '''face_values1 = []
     count = 0
     for i in hand:
-        face_values1.append(dict_inp[i[0]])
+        face_values1.append(D_INP[i[0]])
     face_values1.sort()
     for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
-            count +=1
-    return count == 2
+            count += 1
+    return count == 2'''
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    return len(card_values) == 3
 
 def pair_ofakind(hand):
     '''when two of same kind and three other of other rank
     '''
-    face_values1 = []
-    count = 0    
+    '''face_values1 = []
+    count = 0
     for i in hand:
-        face_values1.append(dict_inp[i[0]])
+        face_values1.append(D_INP[i[0]])
     face_values1.sort()
     for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
             count += 1
     return count == 1
+    '''
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    return len(card_values) == 4
 
 def hand_rank(hand):
     '''
