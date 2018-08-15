@@ -37,10 +37,16 @@ def is_flush(hand):
 
 def four_ofakind(hand):
     suit = hand[0]
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     cnt_rank = 0
+    j =0
     for i in hand:
-        if suit[0] == i[0]:
+        if suit[0] != i[0]:
+            j += 1
+            suit = hand[j]
+        else:
             cnt_rank += 1
+
     return cnt_rank == 3
 
 def three_ofakind(hand):
