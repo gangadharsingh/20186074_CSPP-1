@@ -49,7 +49,7 @@ def three_ofakind(hand):
     for i in hand:
         if suit[0] == i[0]:
             cnt_rank += 1
-    return cnt_rank == 3
+    return cnt_rank == 2
 
 def pair_ofakind(hand):
     suit = hand[0]
@@ -57,7 +57,7 @@ def pair_ofakind(hand):
     for i in hand:
         if suit[0] == i[0]:
             cnt_rank += 1
-    return cnt_rank == 2
+    return cnt_rank == 1
 
 def hand_rank(hand):
     '''
