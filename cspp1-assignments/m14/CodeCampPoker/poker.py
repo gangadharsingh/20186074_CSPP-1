@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-
+dict_inp = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6, '5':5, '4':4, '3':3, '2':2}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -36,19 +36,18 @@ def is_flush(hand):
     return True
 
 def four_ofakind(hand):
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    suit = card_values[0]
-    cnt_rank = 0
-    j =0
-    for i in card_values:
-        if suit[0] != i[0]:
-            j += 1
-            suit = card_values[j]
-        else:
-            cnt_rank += 1
-    return cnt_rank == 3
+    face_values = []
+    cnt = 0
+    for i in hand:
+        face_values.append(dict_inp[i[0]])
+    face_values.sort()
+    for i in range(0,len(face_values)-1):
+        if face_values[i] = face_values[i+1]:
+            cnt += 1
+    return cnt == 4
 
 def three_ofakind(hand):
+    hand.sorted()
     suit = hand[0]
     cnt_rank = 0
     for i in hand:
