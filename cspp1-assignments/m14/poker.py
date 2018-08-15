@@ -14,7 +14,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    print("is_straight")
     if all(True if c in "2345A" else False for c, s in hand):
         return True
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
@@ -30,7 +29,6 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    print("is_flush")
     suit = hand[0]
     for i in hand:
         if suit[1] != i[1]:
