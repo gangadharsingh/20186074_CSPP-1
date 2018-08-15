@@ -41,7 +41,7 @@ def four_ofakind(hand):
     for i in hand:
         if suit[0] == i[0]:
             cnt_rank += 1
-    return cnt_rank == 4
+    return cnt_rank == 3
 
 def three_ofakind(hand):
     suit = hand[0]
