@@ -43,7 +43,7 @@ def four_ofakind(hand):
     for i in hand:
         face_values1.append(dict_inp[i[0]])
     face_values1.sort()
-    for i in range(len(face_values1)):
+    for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
             count +=1
     return count == 3
@@ -55,7 +55,7 @@ def three_ofakind(hand):
     for i in hand:
         face_values1.append(dict_inp[i[0]])
     face_values1.sort()
-    for i in range(len(face_values1)):
+    for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
             count +=1
     return count == 2
@@ -66,7 +66,7 @@ def pair_ofakind(hand):
     for i in hand:
         face_values1.append(dict_inp[i[0]])
     face_values1.sort()
-    for i in range(len(face_values1)):
+    for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
             count +=1
     return count == 1
