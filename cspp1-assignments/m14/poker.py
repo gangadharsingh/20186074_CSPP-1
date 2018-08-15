@@ -36,6 +36,8 @@ def is_flush(hand):
     return True
 
 def four_ofakind(hand):
+    '''when four of same kind and one other of other rank
+    '''
     face_values1 = []
     count = 0
     for i in hand:
@@ -48,6 +50,8 @@ def four_ofakind(hand):
     
 
 def three_ofakind(hand):
+    '''when three of same kind and two of other of other rank
+    '''
     face_values1 = []
     count = 0
     for i in hand:
@@ -59,6 +63,8 @@ def three_ofakind(hand):
     return count == 2
 
 def pair_ofakind(hand):
+    '''when two of same kind and three other of other rank
+    '''
     face_values1 = []
     count = 0    
     for i in hand:
@@ -66,7 +72,7 @@ def pair_ofakind(hand):
     face_values1.sort()
     for i in range(len(face_values1)-1):
         if face_values1[i+1]-face_values1[i] == 0:
-            count +=1
+            count += 1
     return count == 1
 
 def hand_rank(hand):
