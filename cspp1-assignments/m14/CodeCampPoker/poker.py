@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-#dict_inp = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6, '5':5, '4':4, '3':3, '2':2}
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,17 +14,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    '''face_values = []
-    for i in hand:
-        face_values.append(dict_inp[i[0]])
-    face_values.sort()
-    print(face_values)
-    for i in range(0,len(face_values)-1):
-        if face_values[i+1] - face_values[i] != 1:
-            return False
-    return True
-    '''
-    if all(True if c in "2345A" else False for c,s in hand):
+    if all(True if c in "2345A" else False for c, s in hand):
         return True
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     #"--" indicate 0,1: set is for no duplicate
@@ -83,7 +73,7 @@ def hand_rank(hand):
 def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
-    
+
         Input: List of 2 or more poker hands
                Each poker hand is represented as a list
                Print the hands to see the hand representation
@@ -113,4 +103,3 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-
