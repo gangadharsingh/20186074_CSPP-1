@@ -35,6 +35,32 @@ def is_flush(hand):
             return False
     return True
 
+def four_ofakind(hand):
+    suit = hand[0]
+    cnt_rank = 0
+    for i in hand:
+        if not is_flush(hand):
+            if suit[0] != i[0]:
+                cnt += 1
+    return cnt == 4
+
+def three_ofakind(hand):
+    suit = hand[0]
+    cnt_rank = 0
+    for i in hand:
+        if not is_flush(hand):
+            if suit[0] != i[0]:
+                cnt += 1
+    return cnt == 3
+
+def pair_ofakind(hand):
+    suit = hand[0]
+    cnt_rank = 0
+    for i in hand:
+        if not is_flush(hand):
+            if suit[0] != i[0]:
+                cnt += 1
+    return cnt == 2
 
 def hand_rank(hand):
     '''
@@ -62,10 +88,16 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     if is_straight(hand) and is_flush(hand):
-        return 3
+        return 6
     elif is_flush(hand):
-        return 2
+        return 5
     elif is_straight(hand):
+        return 4
+    elif four_ofakind(hand):
+        return 3
+    elif three_ofakind(hand):
+        return 2
+    elif pair_ofakind(hand):
         return 1
     else:
         return 0
