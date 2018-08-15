@@ -140,8 +140,4 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
-
-    for i in range(0,len(face_values)-1):
-        if face_values[i+1] == face_values[i]:
-
     print(' '.join(poker(HANDS)))
