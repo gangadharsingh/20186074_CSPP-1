@@ -41,10 +41,10 @@ def four_ofakind(hand):
     for i in hand:
         face_values.append(dict_inp[i[0]])
     face_values.sort()
-    for i in range(0,len(face_values)-1):
-        if face_values[i] = face_values[i+1]:
+    for i in range(len(face_values)):
+        if face_values[i] == face_values[i+1]:
             cnt += 1
-    return cnt == 4
+    return cnt == 3
 
 def three_ofakind(hand):
     hand.sorted()
