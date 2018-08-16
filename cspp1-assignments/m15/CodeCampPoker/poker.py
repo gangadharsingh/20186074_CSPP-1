@@ -53,8 +53,8 @@ def four_ofakind(hand):
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     list_chec = list(card_values)
     if len(list_chec) == 2:    
-        cnt1 += list_em.count(str(list_chec[0]))
-        cnt2 += list_em.count(str(list_chec[1]))
+        cnt1 = list_em.count(str(list_chec[0]))
+        cnt2 = list_em.count(str(list_chec[1]))
         return cnt1 == 4 or cnt2 == 4
     return False
 
@@ -68,8 +68,8 @@ def full_house(hand):
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     list_chec = list(card_values)
     if len(list_chec) == 2:    
-        cnt1 += list_em.count(str(list_chec[0]))
-        cnt2 += list_em.count(str(list_chec[1]))
+        cnt1 = list_em.count(str(list_chec[0]))
+        cnt2 = list_em.count(str(list_chec[1]))
         return cnt1 == 3 or cnt2 == 3
     return False
 def three_ofakind(hand):
@@ -85,9 +85,9 @@ def three_ofakind(hand):
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     list_chec = list(card_values)
     if len(list_chec) == 3:    
-        cnt1 += list_em.count(str(list_chec[0]))
-        cnt2 += list_em.count(str(list_chec[1]))
-        cnt3 += list_em.count(str(list_chec[2]))
+        cnt1 = list_em.count(str(list_chec[0]))
+        cnt2 = list_em.count(str(list_chec[1]))
+        cnt3 = list_em.count(str(list_chec[2]))
         return cnt1 == 3 or cnt2 == 3 or cnt3 == 3
     return False
 
@@ -104,9 +104,9 @@ def twopair_ofakind(hand):
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     list_chec = list(card_values)
     if len(list_chec) == 3:    
-        cnt1 += list_em.count(str(list_chec[0]))
-        cnt2 += list_em.count(str(list_chec[1]))
-        cnt3 += list_em.count(str(list_chec[2]))
+        cnt1 = list_em.count(str(list_chec[0]))
+        cnt2 = list_em.count(str(list_chec[1]))
+        cnt3 = list_em.count(str(list_chec[2]))
         return cnt1 == 2 or cnt2 == 2 or cnt3 == 2
     return False
 
