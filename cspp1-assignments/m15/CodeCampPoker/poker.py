@@ -5,11 +5,6 @@
 '''
 D_INP = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6,\
  '5':5, '4':4, '3':3, '2':2}
-
-# def is_fiveof_akind(hand):
-#     for c,s in hand:
-        
-
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -20,11 +15,11 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    if all(True if c in "2345A" else False for c, s in hand):
-        return True
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     #"--" indicate 0,1: set is for no duplicate
     return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
+    if all(True if c in "2345A" else False for c, s in hand):
+        return True
 
 def is_flush(hand):
     '''
@@ -44,84 +39,49 @@ def is_flush(hand):
 def four_ofakind(hand):
     '''when four of same kind and one other of other rank
     '''
-    list_em =[]
-    list_chec = []
-    cnt1 = 0
-    cnt2 = 0
+    ''''face_values1 = []
+    count = 0
     for i in hand:
-        list_em.append(i[0])
+        face_values1.append(D_INP[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)-1):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count += 1
+    return count == 3
+    '''
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    list_chec = list(card_values)
-    if len(list_chec) == 2:    
-        cnt1 = list_em.count(str(list_chec[0]))
-        cnt2 = list_em.count(str(list_chec[1]))
-        return cnt1 == 4 or cnt2 == 4
-    return False
+    return len(card_values) == 2
 
-def full_house(hand):
-    list_em = []
-    list_chec = []
-    cnt1 = 0
-    cnt2 = 0
-    for i in hand:
-        list_em.append(i[0])
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    list_chec = list(card_values)
-    if len(list_chec) == 2:    
-        cnt1 = list_em.count(str(list_chec[0]))
-        cnt2 = list_em.count(str(list_chec[1]))
-        return cnt1 == 3 or cnt2 == 3
-    return False
 def three_ofakind(hand):
     '''when three of same kind and two of other of other rank
     '''
-    list_em = []
-    list_chec = []
-    cnt1 = 0
-    cnt2 = 0
-    cnt3 = 0
+    '''face_values1 = []
+    count = 0
     for i in hand:
-        list_em.append(i[0])
+        face_values1.append(D_INP[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)-1):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count += 1
+    return count == 2'''
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    list_chec = list(card_values)
-    if len(list_chec) == 3:    
-        cnt1 = list_em.count(str(list_chec[0]))
-        cnt2 = list_em.count(str(list_chec[1]))
-        cnt3 = list_em.count(str(list_chec[2]))
-        return cnt1 == 3 or cnt2 == 3 or cnt3 == 3
-    return False
+    return len(card_values) == 3
 
-def twopair_ofakind(hand):
+def pair_ofakind(hand):
     '''when two of same kind and three other of other rank
     '''
-    list_em = []
-    list_chec = []
-    cnt1 = 0
-    cnt2 = 0
-    cnt3 = 0
+    '''face_values1 = []
+    count = 0
     for i in hand:
-        list_em.append(i[0])
+        face_values1.append(D_INP[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)-1):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count += 1
+    return count == 1
+    '''
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    list_chec = list(card_values)
-    for i in range(len(list_chec)-1):
-        if list_em.count(str(list_chec[i])) + list_em.count(str(list_chec[i+1])) == 4:
-            cnt1 = 1
-
-def one_pair(hand):
-
-    list_em = []
-    list_chec = []
-    for i in hand:
-        list_em.append(i[0])
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    list_chec = list(card_values)
-    for i in range(len(list_chec)):
-        if list_em.count(str(list_chec[i])) == 2:
-            return True
-    return False
-
-
-
+    return len(card_values) == 4
 
 def hand_rank(hand):
     '''
@@ -149,24 +109,20 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     cnt = 0
-    if is_fiveof_akind(hand):
-        cnt = 9
-    elif is_straight(hand) and is_flush(hand):
-        cnt = 8
-    elif four_ofakind(hand):
-        cnt = 7
-    elif full_house(hand):
+    if is_straight(hand) and is_flush(hand):
         cnt = 6
-    elif is_flush(hand):
+    elif four_ofakind(hand):
         cnt = 5
-    elif is_straight(hand):
+    elif is_flush(hand):
         cnt = 4
-    elif three_ofakind(hand):
+    elif is_straight(hand):
         cnt = 3
-    elif twopair_ofakind(hand):
+    elif three_ofakind(hand):
         cnt = 2
-    elif one_pair(hand):
+    elif pair_ofakind(hand):
         cnt = 1
+    else:
+        cnt = 0
     return cnt
 
 def poker(hands):
