@@ -8,7 +8,7 @@ D_INP = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6,\
 
 # def is_fiveof_akind(hand):
 #     for c,s in hand:
-#         if
+        
 
 def is_straight(hand):
     '''
@@ -20,11 +20,11 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    if all(True if c in "2345A" else False for c, s in hand):
+        return True
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     #"--" indicate 0,1: set is for no duplicate
     return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
-    if all(True if c in "2345A" else False for c, s in hand):
-        return True
 
 def is_flush(hand):
     '''
