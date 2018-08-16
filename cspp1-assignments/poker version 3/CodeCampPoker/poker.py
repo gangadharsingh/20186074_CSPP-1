@@ -54,7 +54,7 @@ def three_ofakind(hand):
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     return len(card_values) == 3
 
-def pair_ofakind(hand):
+def two_pair_ofakind(hand):
     '''when two of same kind and three other of other rank
     '''
 
