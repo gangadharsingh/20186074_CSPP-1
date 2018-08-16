@@ -43,6 +43,9 @@ def four_ofakind(hand):
 
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     return len(card_values) == 2
+def full_house(hand):
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    return len(card_values) == 2
 
 def three_ofakind(hand):
     '''when three of same kind and two of other of other rank
@@ -99,11 +102,11 @@ def hand_rank(hand):
         cnt = 5
     elif is_straight(hand):
         cnt = 4
-    elif two_pair_ofakind(hand):
-        cnt = 3
-    elif one_pairofakind(hand):
-        cnt = 2
     elif three_ofakind(hand):
+        cnt = 3
+    elif two_pair_ofakind(hand):
+        cnt = 2
+    elif one_pairofakind(hand):
         cnt = 1
     else:
         cnt = 0
