@@ -6,18 +6,6 @@
 D_INP = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6,\
  '5':5, '4':4, '3':3, '2':2}
 
-def card_value(hand):
-    card = []
-    for c,s in hand:
-       card.append(c)
-    return card
-
-def suit_value(hand):
-    suit = []
-    for c,s in hand:
-       suit.append(s)
-    return suit
-
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -52,20 +40,18 @@ def is_flush(hand):
 def four_ofakind(hand):
     '''when four of same kind and one other of other rank
     '''
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 2
 
-def full_house(hand):
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     return len(card_values) == 2
 
 def three_ofakind(hand):
     '''when three of same kind and two of other of other rank
     '''
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 2
 
-def two_pair_ofakind(hand):
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    return len(card_values) == 3
+
+def pair_ofakind(hand):
     '''when two of same kind and three other of other rank
     '''
 
