@@ -69,6 +69,7 @@ def two_pair_ofakind(hand):
 
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     return len(card_values) == 4
+
 def one_pairofkind(hand):
     face_value = face_value(hand)
     face_value.sort()
@@ -102,21 +103,21 @@ def hand_rank(hand):
     face_value = face_value(hand)
     face_value.sort()
     if is_straight(hand) and is_flush(hand):
-        cnt = 6
+        cnt = 108
     elif four_ofakind(hand):
-        cnt = 5
+        cnt = 107
     elif full_house(hand):
-        cnt = 
+        cnt = 106
     elif is_flush(hand):
-        cnt = 4
+        cnt = 105
     elif is_straight(hand):
-        cnt = 3
+        cnt = 104
     elif two_pair_ofakind(hand):
-        cnt = 1
+        cnt = 103
     elif one_pairofakind(hand):
-        cnt = 1
+        cnt = 102
     elif three_ofakind(hand):
-        cnt = 2
+        cnt = 101
     else:
         cnt = 0
     return cnt
