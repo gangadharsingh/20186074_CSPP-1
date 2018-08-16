@@ -157,7 +157,7 @@ def hand_rank(hand):
         cnt = 3
     elif three_ofakind(hand):
         cnt = 2
-    elif pair_ofakind(hand):
+    elif twopair_ofakind(hand):
         cnt = 1
     else:
         cnt = 0
