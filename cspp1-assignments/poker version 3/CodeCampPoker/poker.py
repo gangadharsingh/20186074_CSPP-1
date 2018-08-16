@@ -62,9 +62,8 @@ def two_pair_ofakind(hand):
     return len(card_values) == 4
 
 def one_pairofakind(hand):
-    face_value = face_value(hand)
-    face_value.sort()
-    return len(set(face_value)) == 4
+    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    return len(card_values) == 4
 
 def hand_rank(hand):
     '''
