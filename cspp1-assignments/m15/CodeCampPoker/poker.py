@@ -107,13 +107,28 @@ def twopair_ofakind(hand):
         cnt1 = list_em.count(str(list_chec[0]))
         cnt2 = list_em.count(str(list_chec[1]))
         cnt3 = list_em.count(str(list_chec[2]))
-        return cnt1 == 2 or cnt2 == 2 or cnt3 == 2
+        return cnt1+cnt2 == 4 or cnt2+cnt3 == 4 or cnt3+cnt1 ==4
     return False
 
 def one_pair(hand):
 
+    list_em = []
+    list_chec = []
+    cnt1 = 0
+    cnt2 = 0
+    cnt3 = 0
+    cnt4 = 0
+    for i in hand:
+        list_em.append(i[0])
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 4
+    list_chec = list(card_values)
+    if len(list_chec) == 4:    
+        cnt1 = list_em.count(str(list_chec[0]))
+        cnt2 = list_em.count(str(list_chec[1]))
+        cnt3 = list_em.count(str(list_chec[2]))
+        cnt4 = list_em.count(str(list_chec[3]))
+        return cnt1 == 2 or cnt2 == 2 or cnt3 == 2
+    return False
 
 
 
@@ -161,8 +176,6 @@ def hand_rank(hand):
         cnt = 2
     elif one_pair(hand):
         cnt = 1
-    else:
-        cnt = 0
     return cnt
 
 def poker(hands):
