@@ -3,21 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-D_INP = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6,\
- '5':5, '4':4, '3':3, '2':2}
-
-def card_value(hand):
-    card = []
-    for c,s in hand:
-       card.append(c)
-    return card
-
-def suit_value(hand):
-    suit = []
-    for c,s in hand:
-       suit.append(s)
-    return suit
-
+dict_inp = {'A':14, 'K':13, 'Q':12, 'J':11, 'T':10, '9':9, '8':8, '7':7, '6':6, '5':5, '4':4, '3':3, '2':2}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -28,11 +14,12 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
+    print("is_straight")
+    if all(True if c in "2345A" else False for c, s in hand):
+        return True
     card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
     #"--" indicate 0,1: set is for no duplicate
     return len(card_values) == 5 and (max(card_values) - min(card_values) == 4)
-    if all(True if c in "2345A" else False for c, s in hand):
-        return True
 
 def is_flush(hand):
     '''
@@ -43,6 +30,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
+    print("is_flush")
     suit = hand[0]
     for i in hand:
         if suit[1] != i[1]:
@@ -50,32 +38,35 @@ def is_flush(hand):
     return True
 
 def four_ofakind(hand):
-    '''when four of same kind and one other of other rank
-    '''
-
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 2
-
-def full_house(hand):
-
+    face_values1 = []
+    for i in hand:
+        face_values1.append(dict_inp[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count +=1
+    return count == 3
+    
 
 def three_ofakind(hand):
-    '''when three of same kind and two of other of other rank
-    '''
+    face_values1 = []
+    for i in hand:
+        face_values1.append(dict_inp[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count +=1
+    return count == 2
 
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 3
-
-def two_pair_ofakind(hand):
-    '''when two of same kind and three other of other rank
-    '''
-
-    card_values = set(['--23456789TJQKA'.index(c) for c, s in hand])
-    return len(card_values) == 4
-def one_pairofkind(hand):
-    face_value = face_value(hand)
-    face_value.sort()
-    return len(set(face_value)) == 4
+def pair_ofakind(hand):
+    face_values1 = []
+    for i in hand:
+        face_values1.append(dict_inp[i[0]])
+    face_values1.sort()
+    for i in range(len(face_values1)):
+        if face_values1[i+1]-face_values1[i] == 0:
+            count +=1
+    return count == 1
 
 def hand_rank(hand):
     '''
@@ -102,27 +93,20 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    face_value = face_value(hand)
-    face_value.sort()
     if is_straight(hand) and is_flush(hand):
-        cnt = 6
+        return 6
     elif four_ofakind(hand):
-        cnt = 5
-    elif full_house(hand):
-        cnt = 
+        return 5
     elif is_flush(hand):
-        cnt = 4
+        return 4
     elif is_straight(hand):
-        cnt = 3
-    elif two_pair_ofakind(hand):
-        cnt = 1
-    elif one_pairofakind(hand):
-        cnt = 1
+        return 3
     elif three_ofakind(hand):
-        cnt = 2
+        return 2
+    elif pair_ofakind(hand):
+        return 1
     else:
-        cnt = 0
-    return cnt
+        return 0
 
 def poker(hands):
     '''
@@ -156,4 +140,8 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
+
+    for i in range(0,len(face_values)-1):
+        if face_values[i+1] == face_values[i]:
+
     print(' '.join(poker(HANDS)))
