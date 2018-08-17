@@ -48,8 +48,8 @@ def similarity(string1, string2):
     '''
         Compute the document distance as given in the PDF
     '''
-    words_list1 = create_dic(clean_string(dict1))
-    words_list2 = create_dic(clean_string(dict2))
+    words_list1 = create_dic(clean_string(string1))
+    words_list2 = create_dic(clean_string(string2))
 
     
 
