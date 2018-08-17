@@ -37,22 +37,31 @@ def hand_rank(hand):
     return_value = None
     ranks = card_ranks(hand)
     if straight(ranks) and flush(hand):            # straight flush
+        print("straight flush")
         return_value = (8, max(ranks))
     elif kind(4, ranks):                           # 4 of a kind
+        print("4 of a kind")
         return_value = (7, kind(4, ranks), kind(1, ranks))
     elif kind(3, ranks) and kind(2, ranks):        # full house
+        print("full house")
         return_value = (6, kind(3, ranks), kind(2, ranks))
     elif flush(hand):                              # flush
+        print("flush")
         return_value = (5, ranks)
     elif straight(ranks):                          # straight
+        print("straight")
         return_value = (4, max(ranks))
     elif kind(3, ranks):                           # 3 of a kind
+        print("3 of a kind")
         return_value = (3, kind(3, ranks), ranks)
     elif two_pair(ranks):                          # 2 pair
+        print("2 pair")
         return_value = (2, two_pair(ranks), ranks)
     elif kind(2, ranks):                           # kind
+        print("kind")
         return_value = (1, kind(2, ranks), ranks)
     else:                                          # high card
+        print("high card")
         return_value = (0, ranks)
     return return_value
 
