@@ -35,7 +35,7 @@ def create_dic(words_l):
     stopwords = load_stopwords("stopwords.txt")
     for word in words_l:
         word = word.strip()
-        if word not in stopwords and len(word) == '':
+        if word not in stopwords and word != '':
             if word not in dict_n:
                 dict_n[word] = 1
             else:
