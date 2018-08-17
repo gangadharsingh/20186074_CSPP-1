@@ -21,7 +21,7 @@ def combine_dictionary(dict_one, dict_two):
 def calculate_similarity(dict_cal):
     numerator = sum(key[0] * key[1] for key in dict_cal.values())
     d_one = math.sqrt(sum(key[0]**2 for key in dict_cal.values()))
-    d_two = math.sqrt(sum(key[0]**2 for key in dict_cal.values()))
+    d_two = math.sqrt(sum(key[1]**2 for key in dict_cal.values()))
     return numerator/d_one*d_two
 
 def create_dic(words_l):
