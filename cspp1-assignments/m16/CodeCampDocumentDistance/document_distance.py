@@ -9,17 +9,17 @@ def combine_dictionary(dict_one, dict_two):
         dict_combine[word] = [dict_one[word], dict_two[word]]
 
     for word in dict_one:
-        if word not in dict_combine:
+        if word not in dict_two:
             dict_combine[word] = [dict_one[word], 0]
     for word in dict_two:
-        if word not in dict_combine:
+        if word not in dict_one:
             dict_combine[word] = [0, dict_two[word]]
     return dict_combine
 
 def calculate_similarity(dict_cal):
-    numerator = sum(key[0] * key[1] for key in dict_cal)
-    denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal))
-    denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal))
+    numerator = sum(key[0] * key[1] for key in dict_cal.values())
+    denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal.values()))
+    denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal.values()))
 
 def create_dic(words_l):
     '''return dictionary and input as wordlist
@@ -39,7 +39,7 @@ def create_dic(words_l):
 def clean_string(inp_1):
     '''take string and return list
     '''
-    words = inp_1.lower().strip()
+    words = inp_1.lower().strip().replace('\',','')
     regex = re.compile('[â-z]')
     words = regex.sub(" ", words).split(" ")
     return words
@@ -50,7 +50,8 @@ def similarity(string1, string2):
     '''
     words_list1 = create_dic(clean_string(string1))
     words_list2 = create_dic(clean_string(string2))
-
+    dict_similarity = combine_dictionary(words_list1, words_list2)
+    return calculate_similarity()
     
 
 def load_stopwords(filename):
