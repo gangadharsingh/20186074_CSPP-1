@@ -40,7 +40,7 @@ def clean_string(inp_1):
     '''take string and return list
     '''
     words = inp_1.lower().strip().replace('\',','')
-    regex = re.compile('[â-z]')
+    regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
     return words
 
