@@ -7,7 +7,8 @@ def combine_dictionary(dict_one, dict_two):
     dict_combine = {}
     for word in dict_one:
         if word in dict_two:
-            dict_combine[word] = [dict_one[word], dict_two[word]]
+            if word not in dict_combine:
+                dict_combine[word] = [dict_one[word], dict_two[word]]
 
     for word in dict_one:
         if word not in dict_two:
