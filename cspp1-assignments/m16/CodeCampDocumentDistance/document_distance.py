@@ -31,18 +31,18 @@ def create_dic(words_l):
     stopwords = load_stopwords("stopwords.txt")
     for word in words_l:
         word = word.strip()
-        if word not in stopwords and len(word) > 0:
+        if word not in stopwords and len(word) != 0:
             if word not in dict_n:
                 dict_n[word] = 1
             else:
                 dict_n[word] += 1
-    return dict_n 
+    return dict_n
 
 
 def clean_string(inp_1):
     '''take string and return list
     '''
-    words = inp_1.lower().strip().replace('\'','')
+    words = inp_1.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
     return words
@@ -55,7 +55,7 @@ def similarity(string1, string2):
     words_list2 = create_dic(clean_string(string2))
     dict_similarity = combine_dictionary(words_list1, words_list2)
     return calculate_similarity(dict_similarity)
-    
+
 
 def load_stopwords(filename):
     '''
