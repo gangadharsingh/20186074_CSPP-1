@@ -4,45 +4,45 @@
 import re
 import math
 def combine_dictionary(dict_one, dict_two):
-	dict_combine = {}
-	for word in dict_one and dict_two:
-		dict_combine[word] = [dict_one[word], dict_two[word]]
+    dict_combine = {}
+    for word in dict_one and dict_two:
+        dict_combine[word] = [dict_one[word], dict_two[word]]
 
-	for word in dict_one:
-		if word not in dict_combine:
-			dict_combine[word] = [dict_one[word], 0]
-	for word in dict_two:
-		if word not in dict_combine:
-			dict_combine[word] = [0, dict_two[word]]
-	return dict_combine
+    for word in dict_one:
+        if word not in dict_combine:
+            dict_combine[word] = [dict_one[word], 0]
+    for word in dict_two:
+        if word not in dict_combine:
+            dict_combine[word] = [0, dict_two[word]]
+    return dict_combine
 
 def calculate_similarity(dict_cal):
-	numerator = sum(key[0] * key[1] for key in dict_cal)
-	denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal))
-	denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal))
+    numerator = sum(key[0] * key[1] for key in dict_cal)
+    denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal))
+    denominator_one = math.sqrt(sum(key[0]**2 for key in dict_cal))
 
 def create_dic(words_l):
-	'''return dictionary and input as wordlist
-	'''
-	dict_n = {}
-	stopwords = load_stopwords("stopwords.txt")
-	for word in words_l:
-		word = word.strip()
-		if word not in stopwords and len(word) > 0:
-			if word not in dict_n:
-				dict_n[word] = 1
-			else:
-				dict_n[word] += 1
-	return dict_n 
+    '''return dictionary and input as wordlist
+    '''
+    dict_n = {}
+    stopwords = load_stopwords("stopwords.txt")
+    for word in words_l:
+        word = word.strip()
+        if word not in stopwords and len(word) > 0:
+            if word not in dict_n:
+                dict_n[word] = 1
+            else:
+                dict_n[word] += 1
+    return dict_n 
 
 
 def clean_string(inp_1):
-	'''take string and return list
-	'''
-	words = inp_1.lower().strip()
-	regex = re.compile('[â-z]')
-	words = regex.sub(" ", words).split(" ")
-	return words
+    '''take string and return list
+    '''
+    words = inp_1.lower().strip()
+    regex = re.compile('[â-z]')
+    words = regex.sub(" ", words).split(" ")
+    return words
 
 def similarity(string1, string2):
     '''
