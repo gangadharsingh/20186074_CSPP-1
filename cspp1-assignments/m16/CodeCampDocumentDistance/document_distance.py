@@ -51,7 +51,7 @@ def similarity(string1, string2):
     words_list1 = create_dic(clean_string(string1))
     words_list2 = create_dic(clean_string(string2))
     dict_similarity = combine_dictionary(words_list1, words_list2)
-    return calculate_similarity()
+    return calculate_similarity(dict_similarity)
     
 
 def load_stopwords(filename):
