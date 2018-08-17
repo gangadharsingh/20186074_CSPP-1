@@ -11,10 +11,10 @@ def combine_dictionary(dict_one, dict_two):
                 dict_combine[word] = [dict_one[word], dict_two[word]]
 
     for word in dict_one:
-        if word not in dict_two:
+        if word not in dict_combine:
             dict_combine[word] = [dict_one[word], 0]
     for word in dict_two:
-        if word not in dict_one:
+        if word not in dict_combine:
             dict_combine[word] = [0, dict_two[word]]
     return dict_combine
 
