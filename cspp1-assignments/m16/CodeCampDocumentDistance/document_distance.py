@@ -4,6 +4,8 @@
 import re
 import math
 def combine_dictionary(dict_one, dict_two):
+    '''input: two dictionary and output: combine dictionary with value as list
+    '''
     dict_combine = {}
     for word in dict_one:
         if word in dict_two:
@@ -19,6 +21,8 @@ def combine_dictionary(dict_one, dict_two):
     return dict_combine
 
 def calculate_similarity(dict_cal):
+    '''input: combine dictionary and output: value of the dictionary num/denom
+    '''
     numerator = sum([key[0] * key[1] for key in dict_cal.values()])
     d_one = math.sqrt(sum([key[0]**2 for key in dict_cal.values()]))
     d_two = math.sqrt(sum([key[1]**2 for key in dict_cal.values()]))
