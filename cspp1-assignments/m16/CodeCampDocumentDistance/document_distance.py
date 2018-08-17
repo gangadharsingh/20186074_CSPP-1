@@ -35,7 +35,7 @@ def create_dic(words_l):
     stopwords = load_stopwords("stopwords.txt")
     for word in words_l:
         word = word.strip()
-        if word not in stopwords and len(word) != 0:
+        if word not in stopwords and len(word) == '':
             if word not in dict_n:
                 dict_n[word] = 1
             else:
@@ -61,13 +61,13 @@ def similarity(string1, string2):
     return calculate_similarity(dict_similarity)
 
 
-def load_stopwords(file_name):
+def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(file_name, 'r') as file_name:
-        for line in file_name:
+    with open(filename, 'r') as filename:
+        for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
 
