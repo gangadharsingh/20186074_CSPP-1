@@ -42,7 +42,7 @@ def word_list(text):
     '''
     word_clean = text.lower().strip().replace('\'','')
     regex = re.compile('[^a-z]')
-    word_clean = regex.sub(" ", word_clean).split(" ")
+    word_clean = [regex.sub(" ", word_clean).split(" ") for word in text.lower().split(" ")]
     return word_clean
 
 def build_search_index(docs):
@@ -52,16 +52,16 @@ def build_search_index(docs):
     dict_emp = {}
     stopwords = load_stopwords("stopwords.txt")
     # initialize a search index (an empty dictionary)
-    for i in docs:
-        if i not in stopwords and i != '':
-            if i not in dict_emp:
-                dict_emp = dict(enumerate(docs))
+    for i,l in enumerate(docs):
+        L = remove_stopwords()(word_list(line), stopwords)
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-    for i in dict_emp:
-        sorted(dict_emp[i])
-        dict_emp[i] = word_list(dict_emp[i])
+    for i in set(L):
+        if i in dict_emp:
+            dict_emp[i].append(index_dict, L.count(i))
+        else:
+            dict_emp[i] = [index_dict, L.count(i)]
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
     return dict_emp
@@ -73,8 +73,8 @@ def print_search_index(index):
     '''
         print the search index
     '''
+    dict_prnt = {}
     keys = sorted(index.keys())
-    print(index[keys],'keys--------')
     for key in keys:
         print(key, " - ", index[key])
 
