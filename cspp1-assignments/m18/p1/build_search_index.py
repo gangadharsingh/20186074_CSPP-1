@@ -56,8 +56,6 @@ def build_search_index(docs):
         if i not in stopwords and i != '':
             if i not in dict_emp:
                 dict_emp = dict(enumerate(docs))
-        print(dict_emp,'-----------------------+++++------')
-    print('\n')
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
