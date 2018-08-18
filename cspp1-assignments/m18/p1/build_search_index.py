@@ -67,7 +67,6 @@ def build_search_index(docs):
     return dict_emp
     # return search index
 
-
 # helper function to print the search index
 # use this to verify how the search index looks
 def print_search_index(index):
@@ -75,6 +74,7 @@ def print_search_index(index):
         print the search index
     '''
     keys = sorted(index.keys())
+    print(keys)
     for key in keys:
         print(key, " - ", index[key])
 
