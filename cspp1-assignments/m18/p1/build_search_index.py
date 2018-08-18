@@ -64,7 +64,6 @@ def build_search_index(docs):
         dict_emp[i] = word_list(dict_emp[i])
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
-    print(docs,'\n',dict_emp)
     return dict_emp
     # return search index
 
