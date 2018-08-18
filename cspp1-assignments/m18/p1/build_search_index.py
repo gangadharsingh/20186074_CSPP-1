@@ -40,10 +40,10 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    words = inp_1.lower().strip().replace('\'', '')
+    word_clean = text.lower().strip().replace('\'','')
     regex = re.compile('[^a-z]')
-    words = regex.sub(" ", words).split(" ")
-    return words
+    word_clean = regex.sub(" ", word_clean).split(" ")
+    return word_clean
 
 def build_search_index(docs):
     '''
@@ -53,7 +53,6 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     # initialize a search index (an empty dictionary)
     for i in docs:
-        i = i.strip()
         if i not in stopwords and i != '':
             if i not in dict_emp:
                 dict_emp = dict(enumerate(docs))
@@ -75,7 +74,7 @@ def print_search_index(index):
         print the search index
     '''
     keys = sorted(index.keys())
-    print(index.values(),'keys--------')
+    print(index.values(keys),'keys--------')
     for key in keys:
         print(key, " - ", index[key])
 
