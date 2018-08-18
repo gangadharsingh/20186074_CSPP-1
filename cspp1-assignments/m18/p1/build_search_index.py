@@ -53,9 +53,10 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     # initialize a search index (an empty dictionary)
     for i in docs:
-        if i not in stopwords and len(i) > 0:
-            dict_emp = dict(enumerate(docs))
-    print(dict_emp)
+        if i not in stopwords and i != '':
+            if i not in dict_emp:
+                dict_emp = dict(enumerate(docs))
+        print(dict_emp,'-----------------------+++++------')
     print('\n')
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
@@ -65,7 +66,7 @@ def build_search_index(docs):
             dict_emp[i] = word_list(dict_emp[i])
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
-    print(docs,'\n',str(dict_emp[1]).strip)
+    print(docs,'\n',dict_emp)
     return dict_emp
     # return search index
 
