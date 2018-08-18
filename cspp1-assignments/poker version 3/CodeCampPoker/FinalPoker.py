@@ -52,7 +52,7 @@ def hand_rank(hand):
         print("straight")
         return_value = (4, max(ranks))
     elif kind(3, ranks):                           # 3 of a kind
-        print("3 of a kind")
+        print("3 of a kind")0
         return_value = (3, kind(3, ranks), ranks)
     elif two_pair(ranks):                          # 2 pair
         print("2 pair")
