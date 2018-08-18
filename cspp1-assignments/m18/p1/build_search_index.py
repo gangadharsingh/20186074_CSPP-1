@@ -74,7 +74,7 @@ def print_search_index(index):
         print the search index
     '''
     keys = sorted(index.keys())
-    print(keys,'keys--------')
+    print(index.keys(),'keys--------')
     for key in keys:
         print(key, " - ", index[key])
 
