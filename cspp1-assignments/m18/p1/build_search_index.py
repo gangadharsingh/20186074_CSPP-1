@@ -69,18 +69,12 @@ def build_search_index(docs):
 
 # helper function to print the search index
 # use this to verify how the search index looks
-def print_search_index(dict_search):
+def print_search_index(index):
     '''
         print the search index
     '''
-    keys = sorted(dict_search.keys())
-    dict_temp = {}
-    for i in dict_search:
-        if dict_search[i] not in dict_temp:
-            dict_temp[dict_search[i]] = []
-            dict_temp[dict_search[i]].append(i)
-        else:
-            dict_temp[dict_search[i]].append(i)
+    keys = sorted(index.keys())
+    print(keys,'keys--------')
     for key in keys:
         print(key, " - ", index[key])
 
