@@ -60,8 +60,8 @@ def build_search_index(docs):
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
     for i in dict_emp:
-        if dict_emp[i] != "":
-            dict_emp[i] = word_list(dict_emp[i])
+        sorted(dict_emp[i])
+        dict_emp[i] = word_list(dict_emp[i])
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
     print(docs,'\n',dict_emp)
