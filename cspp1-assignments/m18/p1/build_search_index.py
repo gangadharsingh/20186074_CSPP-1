@@ -51,7 +51,8 @@ def build_search_index(docs):
     stopwords = load_stopwords("stopwords.txt")
     # initialize a search index (an empty dictionary)
     for i in enumerate(docs):
-        print(docs[i])
+        dict_docs = dict(i)
+        print(dict_docs)
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
