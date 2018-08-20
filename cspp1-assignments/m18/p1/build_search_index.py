@@ -28,11 +28,10 @@ def load_stopwords(filename):
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as f_stopwords:
-        for line in f_stopwords:
+    with open(filename, 'r') as filename1:
+        for line in filename1:
             stopwords[line.strip()] = 0
     return stopwords
-
 
 def word_list(text):
     '''
@@ -40,11 +39,10 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    word_clean = text.lower().strip().replace('\'','')
+    words = inp_1.lower().strip().replace('\'', '')
     regex = re.compile('[^a-z]')
-    word_clean = [regex.sub(" ", word_clean).split(" ") for word in text.lower().split(" ")]
-    return word_clean
-
+    words = regex.sub(" ", words).split(" ")
+    return words
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -52,16 +50,12 @@ def build_search_index(docs):
     dict_emp = {}
     stopwords = load_stopwords("stopwords.txt")
     # initialize a search index (an empty dictionary)
-    for i,l in enumerate(docs):
-        L = ((word_list(l), stopwords))
+    for i in enumerate(docs):
+        print(i)
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-    for i in set(L):
-        if i in dict_emp:
-            dict_emp[i].append(index_dict, L.count(i))
-        else:
-            dict_emp[i] = [index_dict, L.count(i)]
+
         # clean up doc and tokenize to words list
         # add or update the words of the doc to the search index
     return dict_emp
