@@ -39,27 +39,34 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    words = inp_1.lower().strip().replace('\'', '')
-    regex = re.compile('[^a-z]')
-    words = regex.sub(" ", words).split(" ")
+    # words = inp_1.lower().strip().replace('\'', '')
+    words = re.sub('[^a-z]', " ", text.lower().replace('\'' '')).split()
+    # words = regex.sub(" ", words).split(" ")
+    stopwords = (load_stopwords("stopwords.txt"))
+    words = [word.strip() for word in words not in stopwords and len(word) > 0]
     return words
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    dict_emp = {}
-    stopwords = load_stopwords("stopwords.txt")
+    search_index = {}
     # initialize a search index (an empty dictionary)
-    for i in enumerate(docs):
-        dict_emp = dict(i)
-        print(dict_emp)
+    for doc_id, doc in enumerate(docs):
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-
+        word_doc_list = word_list(doc)
         # clean up doc and tokenize to words list
+        for word in word_doc_list:
+            if word not in search_index:
+                search_index[word] = []
+                search_index[word].append((doc_id, word_doc_list.count(word)))
+            else:
+                if (doc_id, word_doc_list.count(word) not in search_index[word]):
+                    search_index[word].append((doc_id, word_doc_list.count(word)))   
+
         # add or update the words of the doc to the search index
-    return dict_emp
+    return search_index
     # return search index
 
 # helper function to print the search index
