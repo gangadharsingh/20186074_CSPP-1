@@ -150,7 +150,6 @@ class Message(object):
 
 
 ### Paste your implementation of the Message class here
-        
 
 def main():
     '''
