@@ -72,10 +72,10 @@ def main():
     # size1 = input().split(',')
     # mat_2 = read_matrix(int(size1[0]))
     # add matrix 1 and matrix 2
-    if size == size1:
-        print(add_matrix(mat_1, mat_2))
+    # if size == size1:
+    #     print(add_matrix(mat_1, mat_2))
     # multiply matrix 1 and matrix 2
-    print(mult_matrix(mat_1, mat_2))
+    # print(mult_matrix(mat_1, mat_2))
 
 if __name__ == '__main__':
     main()
