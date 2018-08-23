@@ -43,13 +43,12 @@ def main():
     # read matrix 1
     size = input().split(',')
     mat_1 = read_matrix(int(size[0]))
-    print(mat_1)
     # read matrix 2
-    size = input().split(',')
-    mat_2 = read_matrix(int(size[0]))
-    print(mat_2)
+    size1 = input().split(',')
+    mat_2 = read_matrix(int(size1[0]))
     # add matrix 1 and matrix 2
-
+    if size == size1:
+        print(add_matrix(mat_1, mat_2))
     # multiply matrix 1 and matrix 2
     pass
 
