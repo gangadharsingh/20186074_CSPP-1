@@ -14,8 +14,8 @@ def mult_matrix(mat_1, mat_2):
         return None
     row_m = []
     mat_mul = []
-    for i in range(len(mat_1)):
-        for j in range(len(mat_2[0])):
+    for i in enumerate(mat_1):
+        for j in enumerate(mat_1[0]):
             sums = 0
             for k in range(len(mat_2)):
                 sums += mat_1[i][k]*mat_2[k][j]
