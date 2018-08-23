@@ -82,7 +82,7 @@ def main():
     # mat_1 = read_matrix(int(size[0]))
     # read matrix 2
     mat_two = read_matrix()
-    print(mat_one,mat_two)
+    #print(mat_one,mat_two)
     if mat_one != 0 and mat_two != 0:
         print(add_matrix(mat_one, mat_two))
         print(mult_matrix(mat_one, mat_two))
