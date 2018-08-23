@@ -9,7 +9,7 @@ def mult_matrix(m1, m2):
     mul = []
     if len(m1[0]) == len(m2):
         for i in range(len(m1)):
-            mul.append(sum(m1[i][j]*m2[j][i] for j in range(m2[0])))
+            mul.append(sum(m1[i][j]*m2[j][i] for j in range(len(m2[0]))))
         return mul
     else:
         print("Error: Matrix shapes invalid for mult")
