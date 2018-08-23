@@ -14,7 +14,7 @@ def mult_matrix(m1, m2):
     # else:
     #     print("Error: Matrix shapes invalid for mult")
     #     return None
-    row = len(m1)
+    row = len(m1[0])
     col = len(m2)
     multi_mat = gnerate_mat(row, col)
     if len(multi_mat) != len(m1[0]) and len(multi_mat) != len(m2):
