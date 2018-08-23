@@ -65,7 +65,7 @@ def read_matrix():
             mat.append([int(i) for i in l_mat_r])
         else:
             print("Error: Invalid input for the matrix")
-            break
+            return 0
     return mat
     # mat = []
     # for i in range(num):
@@ -83,7 +83,8 @@ def main():
     # read matrix 2
     mat_two = read_matrix()
     print(mat_one,mat_two)
-    if mat_one == 
+    if mat_one == 0 or mat_two == 0:
+        break
     # size1 = input().split(',')
     # mat_2 = read_matrix(int(size1[0]))
     # add matrix 1 and matrix 2
