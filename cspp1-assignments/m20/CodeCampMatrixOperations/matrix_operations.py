@@ -38,7 +38,7 @@ def add_matrix(mat_1, mat_2):
             for j in range(len(mat_1[i])):
                 sum_m.append(mat_1[i][j] + mat_2[i][j])
         return [sum_m[cnt:cnt+len(mat_1[0])] for cnt in range(0, len(sum_m), len(mat_1[0]))]
-    
+
     print("Error: Matrix shapes invalid for addition")
     return None
 
