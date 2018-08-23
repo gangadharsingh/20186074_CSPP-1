@@ -27,16 +27,16 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    pass
-
-def main():
-    # read matrix 1
     num_m1 = int(input())
     L_m1 = []
     for i in num_m1:
     	l1 = input()
     	L_m1.append(l.split(' '))
     print(L_m1)
+
+def main():
+    # read matrix 1
+
     # read matrix 2
     num_m2 = int(input())
     L_m2 = []
