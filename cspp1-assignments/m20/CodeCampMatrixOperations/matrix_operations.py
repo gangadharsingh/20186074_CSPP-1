@@ -8,7 +8,7 @@ def mult_matrix(mat_1, mat_2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    multi_mat = []
+
     if len(mat_1[0]) != len(mat_2):
         print("Error: Matrix shapes invalid for mult")
         return None
@@ -38,9 +38,9 @@ def add_matrix(mat_1, mat_2):
             for j in range(len(mat_1[i])):
                 sum_m.append(mat_1[i][j] + mat_2[i][j])
         return [sum_m[cnt:cnt+len(mat_1[0])] for cnt in range(0, len(sum_m), len(mat_1[0]))]
-    else:
-        print("Error: Matrix shapes invalid for addition")
-        return None
+    
+    print("Error: Matrix shapes invalid for addition")
+    return None
 
 def read_matrix():
     '''
@@ -52,10 +52,10 @@ def read_matrix():
     '''
     mat = []
     list_inp = input().split(',')
-    r, c = int(list_inp[0]), int(list_inp[1])
-    for i in range(r):
+    row_m, col_m = int(list_inp[0]), int(list_inp[1])
+    for _ in range(row_m):
         l_mat_r = input().split(' ')
-        if c == len(l_mat_r):
+        if col_m == len(l_mat_r):
             mat.append([int(i) for i in l_mat_r])
         else:
             print("Error: Invalid input for the matrix")
@@ -63,6 +63,8 @@ def read_matrix():
     return mat
 
 def main():
+    '''main function
+    '''
     # read matrix 1
     mat_one = read_matrix()
     # read matrix 2
