@@ -28,10 +28,8 @@ def read_matrix(num):
         error message should be "Error: Invalid input for the matrix"
     '''
     mat = []
-    for j in range(len(num)+1,2):
-        for i in range(len(num[j])):
-            list_mat = input().split(' ')
-            mat.append(list_mat)
+    for i in range(num):
+        mat.append(input().split(' '))
     mat_n = []
     for j in range(len(mat)):
         mat_n.append([int(i) for i in mat[j]])
@@ -39,12 +37,11 @@ def read_matrix(num):
 
 def main():
     # read matrix 1
-    size_1 = input()
-    mat_1 = read_matrix(size_1)
+    size = input()
+    mat_1 = read_matrix(int(size[0]))
     print(mat_1)
     # read matrix 2
-    size_2 = input()
-    mat_2 = read_matrix(size_2)
+    mat_2 = read_matrix(int(size[2]))
     print(mat_2)
     # add matrix 1 and matrix 2
 
