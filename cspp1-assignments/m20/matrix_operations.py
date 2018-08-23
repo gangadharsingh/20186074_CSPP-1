@@ -19,7 +19,7 @@ def add_matrix(m1, m2):
 
 
 
-def read_matrix():
+def read_matrix(num):
     '''
         read the matrix dimensions from input
         create a list of lists and read the numbers into it
@@ -27,23 +27,23 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    num_m1 = int(input())
-    L_m1 = []
-    for i in num_m1:
-    	l1 = input()
-    	L_m1.append(l.split(' '))
-    print(L_m1)
+    mat = []
+    for j in range(len(num)+1,2):
+        for i in range(len(num[j])):
+            list_mat = input().split(' ')
+            mat.append(list_mat)
+    mat_n = []
+    for j in range(len(mat)):
+        mat_n.append([int(i) for x in mat[j]])
+    return mat_n
 
 def main():
     # read matrix 1
-
+    size_1 = input()
+    mat_1 = read_matrix(size_1)
     # read matrix 2
-    num_m2 = int(input())
-    L_m2 = []
-    for i in num_m1:
-    	l = input()
-    	L_m2.append(l.split(' '))
-    print(L_m2)
+    size_2 = input()
+    mat_2 = read_matrix(size_2)
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
