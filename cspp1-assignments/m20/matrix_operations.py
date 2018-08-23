@@ -16,7 +16,7 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-
+    
 
 
 def read_matrix(num):
@@ -37,11 +37,12 @@ def read_matrix(num):
 
 def main():
     # read matrix 1
-    size = input()
+    size = input().split(',')
     mat_1 = read_matrix(int(size[0]))
     print(mat_1)
     # read matrix 2
-    mat_2 = read_matrix(int(size[2]))
+    size = input().split(',')
+    mat_2 = read_matrix(int(size[0]))
     print(mat_2)
     # add matrix 1 and matrix 2
 
