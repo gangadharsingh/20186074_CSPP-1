@@ -83,15 +83,18 @@ def main():
     # read matrix 2
     mat_two = read_matrix()
     print(mat_one,mat_two)
-    if mat_one == 0 or mat_two == 0:
+    if mat_one != 0 or mat_two != 0:
+        print(add_matrix(mat_one, mat_two))
+        print(mult_matrix(mat_one, mat_two))
+    else:
         break
     # size1 = input().split(',')
     # mat_2 = read_matrix(int(size1[0]))
     # add matrix 1 and matrix 2
     # if size == size1:
-    print(add_matrix(mat_one, mat_two))
+    #print(add_matrix(mat_one, mat_two))
     # multiply matrix 1 and matrix 2
-    print(mult_matrix(mat_one, mat_two))
+    #print(mult_matrix(mat_one, mat_two))
 
 if __name__ == '__main__':
     main()
