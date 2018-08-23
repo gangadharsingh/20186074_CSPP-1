@@ -22,8 +22,17 @@ def mult_matrix(m1, m2):
         print("Error: Matrix shapes invalid for mult")
         return None
     else:
-        multi_mat.append([sum(m1[i][0]*m2[0][j]+m1[i][1]*m2[1][j] for j in range(len(m2)+1) for i in range(len(m1[0])+1))])
-        return multi_mat
+        r = []
+        c= []
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+                sums= 0
+                for k in range(len(m2)):
+                    sums += m1[i][k]*m2[k][j]
+                r.append(sums)
+            m.append(r)
+            r = []
+        return m
     # return multi_mat
 
 def gnerate_mat(row, col):
