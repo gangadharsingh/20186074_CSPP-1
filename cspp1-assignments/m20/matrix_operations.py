@@ -41,9 +41,11 @@ def main():
     # read matrix 1
     size_1 = input()
     mat_1 = read_matrix(size_1)
+    print(mat_1)
     # read matrix 2
     size_2 = input()
     mat_2 = read_matrix(size_2)
+    print(mat_2)
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
