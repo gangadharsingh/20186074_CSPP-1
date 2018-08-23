@@ -23,7 +23,7 @@ def mult_matrix(m1, m2):
         return None
     else:
         r = []
-        c= []
+        m = []
         for i in range(len(m1)):
             for j in range(len(m2[0])):
                 sums= 0
