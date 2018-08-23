@@ -1,4 +1,3 @@
-import numpy
 def mult_matrix(m1, m2):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -7,8 +6,11 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+    mul = []
     if len(m1[0]) == len(m2):
-        return numpy.multiply(m1, m2)
+        for i in range(len(m1)):
+            mul.append(sum(m1[i][j]*m2[j][i] for j in range(m2)))
+        return mul
     else:
         print("Error: Matrix shapes invalid for mult")
         return None
