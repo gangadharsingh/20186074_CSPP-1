@@ -6,16 +6,23 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    mul = []
-    if len(m1[0]) == len(m2):
-        for i in range(len(m1)):
-            mul.append(sum(m1[i][j]*m2[j][i] for j in range(len(m2[0]))))
-        return mul
-    else:
-        print("Error: Matrix shapes invalid for mult")
-        return None
+    # mul = []
+    # if len(m1[0]) == len(m2):
+    #     for i in range(len(m1)):
+    #         mul.append(sum(m1[i][j]*m2[j][i] for j in range(len(m2[0]))))
+    #     return mul
+    # else:
+    #     print("Error: Matrix shapes invalid for mult")
+    #     return None
+    row = len(m1)
+    col = len(m2)
+    multi_mat = gnerate_mat(row, col)
+    return multi_mat
 
-
+def gnerate_mat(row, col):
+    add_matrix = [[]*col]*row
+    return add_matrix
+    
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
@@ -34,6 +41,12 @@ def add_matrix(m1, m2):
     except :
         print("Error: Matrix shapes invalid for addition")
         return None
+    # row = len(m1)
+    # col = len(m1[0])
+    # add_matrix = gnerate_mat(row, col)
+    # sum_mat = []
+    # add_matrix.append([(m1[i][j])+(m2[i][j]) for j in range(col) for i in range(row)])
+    # return add_matrix
 
 def read_matrix():
     '''
@@ -43,16 +56,16 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    m = []
+    mat = []
     list_inp= input().split(',')
     r, c = int(list_inp[0]), int(list_inp[1])
-    for _ in range(r):
-        l_mat_r = input().split()
+    for i in range(r):
+        l_mat_r = input().split(' ')
         if c == len(l_mat_r):
-            m.append(int(i) for i in l_mat_r)
+            mat.append([int(i) for i in l_mat_r])
         else:
             print("Error: Invalid input for the matrix")
-    return m
+    return mat
     # mat = []
     # for i in range(num):
     #     mat.append(input().split(' '))
@@ -73,9 +86,9 @@ def main():
     # mat_2 = read_matrix(int(size1[0]))
     # add matrix 1 and matrix 2
     # if size == size1:
-    #     print(add_matrix(mat_1, mat_2))
+    print(add_matrix(mat_one, mat_two))
     # multiply matrix 1 and matrix 2
-    # print(mult_matrix(mat_1, mat_2))
+    print(mult_matrix(mat_one, mat_two))
 
 if __name__ == '__main__':
     main()
