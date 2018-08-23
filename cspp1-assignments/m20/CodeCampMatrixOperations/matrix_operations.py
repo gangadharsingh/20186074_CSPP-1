@@ -12,19 +12,18 @@ def mult_matrix(m1, m2):
     if len(m1[0]) != len(m2):
         print("Error: Matrix shapes invalid for mult")
         return None
-    else:
+    r = []
+    m = []
+    for i in range(len(m1)):
+        for j in range(len(m2[0])):
+            sums = 0
+            for k in range(len(m2)):
+                sums += m1[i][k]*m2[k][j]
+            r.append(sums)
+        m.append(r)
         r = []
-        m = []
-        for i in range(len(m1)):
-            for j in range(len(m2[0])):
-                sums= 0
-                for k in range(len(m2)):
-                    sums += m1[i][k]*m2[k][j]
-                r.append(sums)
-            m.append(r)
-            r = []
-        return m
-    
+    return m
+
 def add_matrix(m1, m2):
     '''
         check if the matrix shapes are similar
