@@ -61,7 +61,7 @@ def main():
     if size == size1:
         print(add_matrix(mat_1, mat_2))
     # multiply matrix 1 and matrix 2
-    pass
+    print(mult_matrix(mat_1, mat_2))
 
 if __name__ == '__main__':
     main()
