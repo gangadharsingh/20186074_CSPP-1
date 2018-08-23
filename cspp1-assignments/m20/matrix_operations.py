@@ -34,7 +34,7 @@ def read_matrix(num):
             mat.append(list_mat)
     mat_n = []
     for j in range(len(mat)):
-        mat_n.append([int(i) for x in mat[j]])
+        mat_n.append([int(i) for i in mat[j]])
     return mat_n
 
 def main():
