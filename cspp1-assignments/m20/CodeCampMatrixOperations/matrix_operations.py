@@ -73,7 +73,7 @@ def main():
         print(add_matrix(mat_one, mat_two))
         print(mult_matrix(mat_one, mat_two))
     else:
-        None
+        exit()
     # add matrix 1 and matrix 2
     # multiply matrix 1 and matrix 2
 if __name__ == '__main__':
