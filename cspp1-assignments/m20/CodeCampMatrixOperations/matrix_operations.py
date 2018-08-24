@@ -11,17 +11,8 @@ def mult_matrix(mat_1, mat_2):
 
     if len(mat_1[0]) != len(mat_2):
         print("Error: Matrix shapes invalid for mult")
+`
         return None
-    row_m = []
-    mat_mul = []
-    for i in range(len(mat_1)):
-        for j in range(len(mat_2[0])):
-            sums = 0
-            for k in range(len(mat_2)):
-                sums += mat_1[i][k]*mat_2[k][j]
-            row_m.append(sums)
-        mat_mul.append(row_m)
-        row_m = []
     return mat_mul
 
 def add_matrix(mat_1, mat_2):
