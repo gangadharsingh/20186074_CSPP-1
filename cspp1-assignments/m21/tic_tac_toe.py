@@ -49,6 +49,4 @@ def win_tictactoe(tic_tactoe):
         return 'tic_tactoe[0][0]'
     elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
         return 'tic_tactoe[0][2]'
-    else:
-        exit()
 main()
