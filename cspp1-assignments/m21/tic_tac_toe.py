@@ -26,7 +26,8 @@ def inp_validation(tic_tactoe):
     '''
     if sum(i.count('x') for i in tic_tactoe) > 5 or sum(i.count('o') for i in tic_tactoe) > 5:
         return "invalid game"
-    for i ,j  in enumerate(tic_tactoe):
+    for ind ,row  in enumerate(tic_tactoe):
+        for col in row:   
             if j not in 'xo.':
                 return "invalid input"
     return 1
