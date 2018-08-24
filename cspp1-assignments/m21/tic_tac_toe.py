@@ -39,11 +39,11 @@ def win_tictactoe(tic_tactoe):
     c_o = sum([tic_tactoe[i].count('o') for i in range(len(tic_tactoe))])
     if c_x == 3 and c_o == 3:
         return 'invalid game'
-    if c_x == 3:
+    elif c_x == 3:
         return 'x'
     elif c_o == 3:
         return 'o'
-    if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
+    elif tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
         return tic_tactoe[0][0]
     elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
         return tic_tactoe[0][2]
