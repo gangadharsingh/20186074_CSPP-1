@@ -3,7 +3,7 @@ def main():
     empt_tic = empt_tictactoe()
     # print(empt_tic)
     #checking input is valid or not
-    if inp_validation(empt_tic) == 1:
+    if inp_validation(empt_tic):
         print(win_tictactoe(empt_tic))
     else:
         print(inp_validation(empt_tic))
@@ -25,7 +25,7 @@ def inp_validation(tic_tactoe):
         for j in tic_tactoe[i]:
             if j not in 'xo.':
                 return "invalid input"
-    return 1
+    return True
 
 def win_tictactoe(tic_tactoe):
     # for i in range(len(tic_tactoe)):
