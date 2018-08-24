@@ -28,7 +28,7 @@ def inp_validation(tic_tactoe):
         return "invalid game"
     for ind ,row  in enumerate(tic_tactoe):
         for col in row:   
-            if j not in 'xo.':
+            if col not in 'xo.':
                 return "invalid input"
     return 1
 
