@@ -6,7 +6,7 @@ def main():
     #making tictactoe
     empt_tic = empt_tictactoe()
     #checking input is valid or not
-    if inp_validation(empt_tic) == True:
+    if inp_validation(empt_tic) == 1:
         print(win_tictactoe(empt_tic))
     else:
         print(inp_validation(empt_tic))
@@ -26,11 +26,10 @@ def inp_validation(tic_tactoe):
     '''
     if sum(i.count('x') for i in tic_tactoe) > 5 or sum(i.count('o') for i in tic_tactoe) > 5:
         return "invalid game"
-    for i in range(len(tic_tactoe)):
-        for j in tic_tactoe[i]:
+    for i ,j  in enumerate(tic_tactoe):
             if j not in 'xo.':
                 return "invalid input"
-    return True
+    return 1
 
 def win_tictactoe(tic_tactoe):
     '''checking wining team
@@ -47,6 +46,8 @@ def win_tictactoe(tic_tactoe):
         return tic_tactoe[0][0]
     elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
         return tic_tactoe[0][2]
-    if c_x+c_o == 9:
+    elif c_x+c_o == 9:
         return 'draw'
+    else:
+        exit()
 main()
