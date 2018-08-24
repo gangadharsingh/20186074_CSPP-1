@@ -6,7 +6,7 @@ def main():
     #making tictactoe
     empt_tic = empt_tictactoe()
     #checking input is valid or not
-    if inp_validation(empt_tic) == True:
+    if inp_validation(empt_tic):
         print(win_tictactoe(empt_tic))
     else:
         print(inp_validation(empt_tic))
@@ -38,8 +38,7 @@ def win_tictactoe(tic_tactoe):
     c_x = sum([i.count('x') for i in tic_tactoe])
     c_o = sum([i.count('o') for i in tic_tactoe])
     if c_x == 3 and c_o == 3:
-        str_em = 'invalid game'
-        return str_em
+        return 'invalid game'
     elif c_x == 3:
         return 'x'
     elif c_o == 3:
