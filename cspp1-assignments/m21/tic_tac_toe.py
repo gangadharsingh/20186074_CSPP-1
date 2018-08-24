@@ -28,7 +28,10 @@ def inp_validation(tic_tactoe):
     return 1
 
 def win_tictactoe(tic_tactoe):
-    return True
-
+    for i in range(len(tic_tactoe)):
+        for j in range(len(tic_tactoe)):
+            if sum(cnt.count(tic_tactoe[i][j]) for cnt in tic_tactoe[i]) == 3:
+                return tic_tactoe[i][j]
+    return 'Invalid game'
 
 main()
