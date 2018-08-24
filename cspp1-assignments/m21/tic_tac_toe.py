@@ -35,20 +35,18 @@ def inp_validation(tic_tactoe):
 def win_tictactoe(tic_tactoe):
     '''checking wining team
     '''
-    return_value = ''
     c_x = sum([i.count('x') for i in tic_tactoe])
     c_o = sum([i.count('o') for i in tic_tactoe])
     if c_x == 3 and c_o == 3:
-        return_value = 'invalid game'
+        return 'invalid game'
     if c_x+c_o == 9:
-        return_value = 'draw'
+        return 'draw'
     if c_x == 3:
-        return_value = 'x'
+        return 'x'
     if c_o == 3:
-        return_value = 'o'
+        return 'o'
     if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
-        return_value = 'tic_tactoe[0][0]'
+        return 'tic_tactoe[0][0]'
     if tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
-        return_value = 'tic_tactoe[0][2]'
-    return return_value
+        return 'tic_tactoe[0][2]'
 main()
