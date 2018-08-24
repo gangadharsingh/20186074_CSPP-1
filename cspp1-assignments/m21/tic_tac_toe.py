@@ -1,7 +1,7 @@
 def main():
     #making tictactoe
     empt_tic = empt_tictactoe()
-    print(empt_tic)
+    # print(empt_tic)
     #checking input is valid or not
     if inp_validation(empt_tic) == 1:
         print(win_tictactoe(empt_tic))
