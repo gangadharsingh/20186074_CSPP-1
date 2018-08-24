@@ -34,7 +34,8 @@ def win_tictactoe(tic_tactoe):
                 return tic_tactoe[i][j]
     if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2] == 'x' or 'o':
         return tic_tactoe[0][0]
-    if tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0] == 'x' or 'o':
+    elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0] == 'x' or 'o':
         return tic_tactoe[0][2]
-    return 'draw'
+    else:
+        return 'draw'
 main()
