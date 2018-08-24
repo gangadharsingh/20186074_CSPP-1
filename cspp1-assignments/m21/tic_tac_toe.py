@@ -46,9 +46,9 @@ def win_tictactoe(tic_tactoe):
     elif c_o == 3:
         return 'o'
     elif tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
-        return str(tic_tactoe[0][0])
+        return 'tic_tactoe[0][0]'
     elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
-        return str(tic_tactoe[0][2])
+        return 'tic_tactoe[0][2]'
     else:
         exit()
 main()
