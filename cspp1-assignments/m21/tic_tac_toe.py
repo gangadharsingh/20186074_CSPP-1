@@ -9,19 +9,7 @@ def main():
     if inp_validation(empt_tic) == 1:
         print(win_tictactoe(empt_tic))
     else:
-        chec = inp_validation(empt_tic)
-        if chec == 1:
-            print('invalid game')
-        elif chec == 2:
-            print('draw')
-        elif chec == 3:
-            print('x')
-        elif chec == 4:
-            print('o')
-        elif chec == 5:
-            print(empt_tic[0][0])
-        elif chec == 6:
-            print(empt_tic[0][2])
+        print(inp_validation(empt_tic))
 
 def empt_tictactoe():
     '''creating empty tic tac toe
@@ -50,15 +38,15 @@ def win_tictactoe(tic_tactoe):
     c_x = sum([i.count('x') for i in tic_tactoe])
     c_o = sum([i.count('o') for i in tic_tactoe])
     if c_x == 3 and c_o == 3:
-        return 1#'invalid game'
+        return 'invalid game'
     if c_x+c_o == 9:
-        return 2#'draw'
+        return 'draw'
     if c_x == 3:
-        return 3#'x'
+        return 'x'
     if c_o == 3:
-        return 4#'o'
+        return 'o'
     if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
-        return 5#'tic_tactoe[0][0]'
+        return 'tic_tactoe[0][0]'
     if tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
-        return 6#'tic_tactoe[0][2]'
+        return 'tic_tactoe[0][2]'
 main()
