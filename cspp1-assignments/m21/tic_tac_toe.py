@@ -32,9 +32,9 @@ def win_tictactoe(tic_tactoe):
         for j in range(len(tic_tactoe)):
             if sum(cnt.count(tic_tactoe[i][j]) for cnt in tic_tactoe[i]) == 3:
                 return tic_tactoe[i][j]
-    if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2] == 'x' or 'o':
+    if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
         return tic_tactoe[0][0]
-    elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0] == 'x' or 'o':
+    elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
         return tic_tactoe[0][2]
     else:
         return 'draw'
