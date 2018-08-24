@@ -39,13 +39,13 @@ def win_tictactoe(tic_tactoe):
     c_o = sum([i.count('o') for i in tic_tactoe])
     if c_x == 3 and c_o == 3:
         return 'invalid game'
-    elif c_x+c_o == 9:
+    if c_x+c_o == 9:
         return 'draw'
-    elif c_x == 3:
+    if c_x == 3:
         return 'x'
-    elif c_o == 3:
+    if c_o == 3:
         return 'o'
-    elif tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
+    if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
         return 'tic_tactoe[0][0]'
     if tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
         return 'tic_tactoe[0][2]'
