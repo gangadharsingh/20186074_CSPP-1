@@ -6,7 +6,7 @@ def main():
     #making tictactoe
     empt_tic = empt_tictactoe()
     #checking input is valid or not
-    if inp_validation(empt_tic):
+    if inp_validation(empt_tic) == True:
         print(win_tictactoe(empt_tic))
     else:
         print(inp_validation(empt_tic))
@@ -14,11 +14,11 @@ def main():
 def empt_tictactoe():
     '''creating empty tic tac toe
     '''
-    row = []
+    tic_tactoe = []
     for _ in range(3):
         list_temp = input().split()
-        row.append(list_temp)
-    return row
+        tic_tactoe.append(list_temp)
+    return tic_tactoe
     #either x or y count should not be greater than 5
 
 def inp_validation(tic_tactoe):
