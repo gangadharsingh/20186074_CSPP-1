@@ -28,10 +28,16 @@ def inp_validation(tic_tactoe):
     return 1
 
 def win_tictactoe(tic_tactoe):
-    for i in range(len(tic_tactoe)):
-        for j in range(len(tic_tactoe)):
-            if sum(cnt.count(tic_tactoe[i][j]) for cnt in tic_tactoe[i]) == 3:
-                return tic_tactoe[i][j]
+    # for i in range(len(tic_tactoe)):
+    #     for j in range(len(tic_tactoe)):
+    #         if sum(cnt.count(tic_tactoe[i][j]) for cnt in tic_tactoe[i]) == 3:
+    #             return tic_tactoe[i][j]
+    c_x = sum([tic[i].count('x') for i in range(len(tic))])
+    c_o = sum([tic[i].count('o') for i in range(len(tic))])
+    if c_x == 3:
+        return 'x'
+    else:
+        return 'y'
     if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
         return tic_tactoe[0][0]
     elif tic_tactoe[0][2] == tic_tactoe[1][1] == tic_tactoe[2][0]:
