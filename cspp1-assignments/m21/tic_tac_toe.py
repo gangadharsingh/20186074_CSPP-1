@@ -38,7 +38,8 @@ def win_tictactoe(tic_tactoe):
     c_x = sum([i.count('x') for i in tic_tactoe])
     c_o = sum([i.count('o') for i in tic_tactoe])
     if c_x == 3 and c_o == 3:
-        return 'invalid game'
+        str_em = 'invalid game'
+        return str_em
     elif c_x == 3:
         return 'x'
     elif c_o == 3:
