@@ -44,4 +44,6 @@ def win_tictactoe(tic_tactoe):
         return tic_tactoe[0][2]
     elif c_x+c_o == 9:
         return 'draw'
+    else:
+        return 'invalid game'
 main()
