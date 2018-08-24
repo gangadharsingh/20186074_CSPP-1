@@ -19,7 +19,7 @@ def empt_tictactoe():
     #either x or y count should not be greater than 5
 
 def inp_validation(tic_tactoe):
-    if tic_tactoe.count('x') > 5 or tic_tactoe.count('o') > 5:
+    if sum(i.count('x') for i in tic_tactoe) > 5 or sum(i.count('o') for i in tic_tactoe) > 5:
         return "invalid game"
     for i in range(len(tic_tactoe)):
         for j in tic_tactoe[i]:
