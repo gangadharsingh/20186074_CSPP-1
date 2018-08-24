@@ -1,3 +1,5 @@
+'''checking validation and then who wins the game
+'''
 def main():
     '''tic tac toe game
     '''
