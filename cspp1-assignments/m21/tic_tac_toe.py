@@ -35,8 +35,8 @@ def inp_validation(tic_tactoe):
 def win_tictactoe(tic_tactoe):
     '''checking wining team
     '''
-    c_x = sum([tic_tactoe[i].count('x') for i in range(len(tic_tactoe))])
-    c_o = sum([tic_tactoe[i].count('o') for i in range(len(tic_tactoe))])
+    c_x = sum([i.count('x') for i in tic_tactoe])
+    c_o = sum([i.count('o') for i in tic_tactoe])
     if c_x == 3 and c_o == 3:
         return 'invalid game'
     elif c_x == 3:
