@@ -36,7 +36,7 @@ def win_tictactoe(tic_tactoe):
     c_o = sum([tic_tactoe[i].count('o') for i in range(len(tic_tactoe))])
     if c_x == 3:
         return 'x'
-    else:
+    elif c_o == 3:
         return 'o'
     if tic_tactoe[0][0] == tic_tactoe[1][1] == tic_tactoe[2][2]:
         return tic_tactoe[0][0]
