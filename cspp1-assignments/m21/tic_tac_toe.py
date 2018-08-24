@@ -34,6 +34,8 @@ def win_tictactoe(tic_tactoe):
     #             return tic_tactoe[i][j]
     c_x = sum([tic_tactoe[i].count('x') for i in range(len(tic_tactoe))])
     c_o = sum([tic_tactoe[i].count('o') for i in range(len(tic_tactoe))])
+    if c_x == 3 and c_o == 3:
+        return 'invalid game'    
     if c_x == 3:
         return 'x'
     elif c_o == 3:
@@ -44,6 +46,4 @@ def win_tictactoe(tic_tactoe):
         return tic_tactoe[0][2]
     elif c_x+c_o == 9:
         return 'draw'
-    else:
-        return 'invalid game'
 main()
