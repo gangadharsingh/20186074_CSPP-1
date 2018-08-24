@@ -39,7 +39,7 @@ def win_tictactoe(tic_tactoe):
     while j >= 0:
         m += tic_tactoe[j][j]
         j-=1
-    if m.count(m[0]) == 3
+    if m.count(m[0]) == 3:
         return m[0]
     return 'draw'
 main()
