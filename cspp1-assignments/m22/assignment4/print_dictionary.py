@@ -9,7 +9,7 @@ def print_dictionary(dictionary):
     # for i in dictionary:
     # 	lis.append(dictionary[i])
     for i in sorted(dictionary):
-    	print('%s: %s' % (i, dictionary[i]))
+    	print('%s- %s' % (i, dictionary[i]))
     #print(i,'-',dictionary[i])
     exit()
 
