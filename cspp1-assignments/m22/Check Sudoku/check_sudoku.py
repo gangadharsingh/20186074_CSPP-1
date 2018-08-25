@@ -17,14 +17,12 @@ def check_sudoku(sudoku):
         for i in range(len(sudoku)):
             if not sudoku[j][i] not in '123456789' or len(set(sudoku[j])) != 9:
                 return 'False'
-            # else:
-            #     return 'True'
-    #     elif sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
-    #         return 'False'
-    # sudoku_transpose = transpose_matrix(sudoku)
-    # for j in range(len(sudoku_transpose)):
-    #     if sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
-    #         return 'False'
+            elif sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
+                return 'False'
+    sudoku_transpose = transpose_matrix(sudoku)
+    for j in range(len(sudoku_transpose)):
+        if sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
+            return 'False'
     return 'True'
 def transpose_matrix(sudoku):
     '''transposing the matrix
