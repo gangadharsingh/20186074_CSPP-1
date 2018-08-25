@@ -6,7 +6,7 @@ frequency of each word. Display the frequency values using “#” as a text bas
 def frequency_graph(dictionary):
     str_temp = ''
     for i in sorted(dictionary):
-        str_temp += '%s - %s' % ('#'*i, dictionary[i])
+        str_temp += '%s - %s' % (i, dictionary[i]*['#'])
     print(str_temp)
 
 def main():
