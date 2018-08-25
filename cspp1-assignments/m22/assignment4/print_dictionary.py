@@ -8,9 +8,8 @@ def print_dictionary(dictionary):
     lis_temp = []
     # for i in dictionary:
     # 	lis.append(dictionary[i])
-    for i in dictionary:
-    	lis_temp.append(dictionary[i])
-    print([lis_temp.sort()])
+    for i in sorte(dictionary):
+    	print('%s: %s' % (i, dictionary[i]))
     #print(i,'-',dictionary[i])
     exit()
 
