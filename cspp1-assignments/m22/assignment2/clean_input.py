@@ -2,12 +2,9 @@
 Write a function to clean up a given string by removing the special characters and retain 
 alphabets in both upper and lower case and numbers.
 '''
-
+import re
 def clean_string(string):
-    str_add = ''
-    for i in string:
-    	if i in ['^a-Z']:
-    		str_add += i
+    str_add = re.sub('[^A-Za-z]')
     return str_add
 def main():
     string = input()
