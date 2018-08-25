@@ -13,13 +13,13 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
+    sudoku_transpose = transpose_matrix(sudoku)
     for j in range(len(sudoku)):
         for i in range(len(sudoku)):
             if not sudoku[j][i] not in '123456789' or len(set(sudoku[j])) != 9:
                 return 'False'
         if sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
             return 'False'
-        sudoku_transpose = transpose_matrix(sudoku)
         if sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
             return 'False'
     return 'True'
