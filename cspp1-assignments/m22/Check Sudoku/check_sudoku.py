@@ -22,12 +22,12 @@ def check_sudoku(sudoku):
         # print('out')
             # else:
             #     return 'True'
-    #     elif sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
-    #         return 'False'
-    # sudoku_transpose = transpose_matrix(sudoku)
-    # for j in range(len(sudoku_transpose)):
-    #     if sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
-    #         return 'False'
+        if sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
+            return 'False'
+    sudoku_transpose = transpose_matrix(sudoku)
+    for j in range(len(sudoku_transpose)):
+        if sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
+            return 'False'
     return 'True'
 def transpose_matrix(sudoku):
     '''transposing the matrix
