@@ -17,10 +17,20 @@ def check_sudoku(sudoku):
         for i in range(len(sudoku)):
             if sudoku[j][i] not in '123456789' or len(set(sudoku[j])) != 9:
                 return 'False'
-        for i in range(len(sudoku)):
-            if sudoku[i][j] not in '123456789' or len(set(sudoku[j])) != 9:
-                return 'False'  
+    sudoku_transpose = transpose_matrix(sudoku)
+    for j in range(len(sudoku_transpose)):
+        for i in range(len(sudoku_transpose)):
+            if sudoku_transpose[j][i] not in '123456789' or len(set(sudoku_transpose[j])) != 9:
+                return 'False'
     return 'True'
+def transpose_matrix(sudoku):
+    '''transposing the matrix
+    '''
+    tran_mat = [[sudoku[j][i] for j in range(len(sudoku))] for i in range(len(sudoku[0]))]
+    trans_new = []
+    for trans in tran_mat:
+        trans_new.append(trans)
+    return trans_new
 def main():
     '''
         main function to read input sudoku from console
