@@ -48,7 +48,6 @@ def main():
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
-    print(sudoku)
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
