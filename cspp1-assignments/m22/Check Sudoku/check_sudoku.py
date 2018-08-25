@@ -15,8 +15,11 @@ def check_sudoku(sudoku):
     '''
     for j in range(len(sudoku)):
         for i in range(len(sudoku)):
-            if not sudoku[j][i] not in '123456789' or len(set(sudoku[j])) != 9:
+            print(sudoku[j][i] in '123456789')
+            if sudoku[j][i] not in '123456789' or len(set(sudoku[j])) != 9:
+                print('inside')
                 return 'False'
+        print('out')
             # else:
             #     return 'True'
     #     elif sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
@@ -48,7 +51,7 @@ def main():
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
-    print(sudoku)
+    #print(sudoku)
     # call solution function and print result to console
     print(check_sudoku(sudoku))
 
