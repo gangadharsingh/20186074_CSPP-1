@@ -6,7 +6,7 @@ import re
 def clean_string(string):
     str_new = ''
     for i in string:
-    	if i not in '!@#$%^&*()0' and i not in ' ':
+    	if i not in '!@#$%^&*()0.' and i not in ' ':
     		str_new += i
 
     return str_new
