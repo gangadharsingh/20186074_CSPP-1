@@ -22,6 +22,8 @@ def check_sudoku(sudoku):
             return 'False'
     return 'True'
 def transpose_matrix(sudoku):
+    '''transposing the matrix
+    '''
     tran_mat = [[sudoku[j][i] for j in range(len(sudoku))] for i in range(len(sudoku[0]))]
     trans_new = []
     for trans in tran_mat:
