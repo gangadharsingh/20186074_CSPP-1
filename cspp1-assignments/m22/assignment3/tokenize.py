@@ -3,7 +3,6 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 import re
-from collections import Counter
 def clean_string(string):
     '''clean string
     '''
@@ -14,10 +13,8 @@ def tokenize(string):
     dic_new = {}
     for i in string:
         dic_new[i] = dic_new.get(i, 0) + 1
-    #     if i not in ' ':
-    #         lis_new.append(i)
     return dic_new
-            
+
 def main():
     '''tokenizw the input
     '''
@@ -26,14 +23,12 @@ def main():
     for i in range(inp):
         lis_new = input().split()
         str_new.append(lis_new)
-    #print(str_new)
     str_clean = []
     cnt = 0
     while cnt < len(str_new):
         for i in range(len(str_new[cnt])):
-            str_clean.append(clean_string(str_new[cnt][i])+'')  
+            str_clean.append(clean_string(str_new[cnt][i])+'')
         cnt += 1
-    # print(str_clean)
     print(tokenize(str_clean))
 if __name__ == '__main__':
     main()
