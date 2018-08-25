@@ -4,8 +4,11 @@ alphabets in both upper and lower case and numbers.
 '''
 
 def clean_string(string):
-    pass
-
+    str_add = ''
+    for i in string:
+    	if i in ['^a-Z']:
+    		str_add += i
+    return str_add
 def main():
     string = input()
     print(clean_string(string))
