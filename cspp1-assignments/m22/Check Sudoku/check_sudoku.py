@@ -20,7 +20,7 @@ def check_sudoku(sudoku):
         if sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
             return 'False'
         sudoku_transpose = transpose_matrix(sudoku)
-        elif sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
+        if sum([int(sudoku_transpose[j][i]) for i in range(len(sudoku_transpose))]) != 45:
             return 'False'
     return 'True'
 def transpose_matrix(sudoku):
