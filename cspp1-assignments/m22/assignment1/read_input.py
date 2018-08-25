@@ -7,7 +7,7 @@ def main():
     '''
     num = int(input())
     str_emp = []
-    for i in range(num):
+    for _ in range(num):
         str_emp.append(input())
     for j in str_emp:
         print(j)
