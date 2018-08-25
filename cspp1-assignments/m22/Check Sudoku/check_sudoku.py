@@ -19,7 +19,7 @@ def check_sudoku(sudoku):
             if sudoku[j][i] not in '123456789' or len(set(sudoku[j])) != 9:
                 #print('inside')
                 return 'False'
-        print('out')
+        # print('out')
             # else:
             #     return 'True'
     #     elif sum([int(sudoku[j][i]) for i in range(len(sudoku))]) != 45:
