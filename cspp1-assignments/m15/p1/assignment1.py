@@ -43,7 +43,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
     return word in word_list
 
 ### DO NOT MODIFY THIS FUNCTION ###
@@ -58,7 +58,7 @@ def get_story_string():
 
 WORDLIST_FILENAME = 'words.txt'
 
-class Message(object):
+class Message():
     ''' Message object '''
     ### DO NOT MODIFY THIS METHOD ###
     def __init__(self, text):
@@ -163,6 +163,7 @@ class PlaintextMessage(Message):
         Hint: consider using the parent class constructor so less
         code is repeated
         '''
+        Message.__init__(self,text)
         self.text = text
         self.shift = shift
         self.valid_words = load_words("words.txt")
@@ -228,10 +229,10 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
+        Message.__init__(self,text)
         self.message_text = text
         self.valid_words = load_words("words.txt")[:]
         self.max_valid_words = 0
-        
 
     def decrypt_message(self):
         '''
@@ -260,9 +261,6 @@ class CiphertextMessage(Message):
                 self.max_valid_words = valid_words_count
                 self.decrypted_message = (26 - shift, decrypted)
         return self.decrypted_message
-    
-
-
 ### DO NOT MODIFY THIS METHOD ###
 def main():
     ''' This method is provided to handle testcases'''
@@ -271,4 +269,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
