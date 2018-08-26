@@ -30,7 +30,7 @@ def is_word(word_list, word):
     False
     '''
     word = word.lower()
-    word = word.strip(" !@#$%^&*()-_+={}[]|:;'<>?,./\"")
+    word = word.strip(" !@#$%^&*()-_+={}[]|\:;'<>?,./\"")
     return word in word_list
 
 def get_story_string():
@@ -197,7 +197,7 @@ class CiphertextMessage(Message):
         '''
         self.message_text = text
         self.valid_words = load_words("words.txt")[:]
-        self.max_valid_words = 0        
+        self.max_valid_words = 0
 
     def decrypt_message(self):
         '''
@@ -224,7 +224,7 @@ class CiphertextMessage(Message):
                 self.max_valid_words = valid_words_count
                 self.decrypted_message = (26 - shift, decrypted)
         return self.decrypted_message
-        
+
 def main():
     '''
     Main method
